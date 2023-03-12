@@ -1,0 +1,249 @@
+k9s:
+  refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
+  headless: true
+  logoless: true
+  crumbsless: false
+  readOnly: false
+  noIcons: false
+  logger:
+    tail: 500
+    buffer: 5000
+    sinceSeconds: -1
+    fullScreenLogs: false
+    textWrap: false
+    showTime: false
+  currentContext: mips-ql-infra-dev-aks-admin
+  currentCluster: mips-ql-infra-dev-aks
+  clusters:
+    dev-meps-ql:
+      namespace:
+        active: all
+        favorites:
+        - loki
+        - accept
+        - monitoring
+        - all
+        - prod
+        - test
+        - dev
+        - default
+      view:
+        active: cj
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    dev-mips-ql:
+      namespace:
+        active: all
+        favorites:
+        - all
+        - cattle-system
+        - unicorn-system
+        - test
+        - kube-system
+        - accept
+        - monitoring
+        - loki
+        - prod
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    meps-ql-accept-aks:
+      namespace:
+        active: compart
+        favorites:
+        - compart
+        - logging
+        - kube-system
+        - all
+        - default
+      view:
+        active: secret
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    meps-ql-dev-aks:
+      namespace:
+        active: compart
+        favorites:
+        - monitoring
+        - app-auth
+        - cert-manager
+        - logging
+        - neo4j
+        - kube-system
+        - compart
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    meps-ql-prod-aks:
+      namespace:
+        active: compart
+        favorites:
+        - compart
+        - monitoring
+        - neo4j
+        - all
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    mips-ql-accept-aks:
+      namespace:
+        active: compart
+        favorites:
+        - compart
+        - monitoring
+        - app-auth
+        - neo4j
+        - keycloak
+        - ingress-nginx
+        - kube-system
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    mips-ql-dev-aks:
+      namespace:
+        active: compart
+        favorites:
+        - all
+        - gitlab-runner
+        - unicorn-lg-be-testumgebung
+        - neo4j
+        - dev
+        - unicorn-test-hucka
+        - keycloak
+        - kube-system
+        - compart
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    mips-ql-infra-dev-aks:
+      namespace:
+        active: gitlab-runner
+        favorites:
+        - external-secrets
+        - compart
+        - kube-system
+        - gatekeeper-system
+        - gitlab-runner
+        - all
+        - logging
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    mips-ql-prod-aks:
+      namespace:
+        active: keycloak
+        favorites:
+        - neo4j
+        - monitoring
+        - ingress-nginx
+        - keycloak
+        - kube-system
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
+  screenDumpDir: /tmp/k9s-screens-ahuck

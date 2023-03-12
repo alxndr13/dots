@@ -1,0 +1,20 @@
+[user]
+	name = Alexander Huck
+	email = alexander.huck@inovex.de
+	signingkey = /home/ahuck/.ssh/id_ed25519
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
+[pull]
+	rebase = true
+[gpg]
+	program = gpg
+	format = ssh
