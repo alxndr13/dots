@@ -1,0 +1,25 @@
+[{
+  "position": "bottom",
+  "height": 20,
+//  "output": ["DP-1", "eDP-1", "HDMI-A-1", "DP-3"],
+  "include": [
+		"~/.config/waybar/modules.json",
+	],
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode",
+  ],
+  "modules-center": [
+    "idle_inhibitor",
+  ],
+  "modules-right": [
+    "battery",
+    "pulseaudio",
+    "custom/wttr",
+    "network",
+    "custom/vpn",
+    "custom/bt",
+    "clock",
+    "custom/power",
+  ],
+}]

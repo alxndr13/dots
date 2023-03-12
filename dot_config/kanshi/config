@@ -1,0 +1,53 @@
+{
+    output eDP-1 enable scale 1.0 mode 1920x1080 position 0,0
+}
+{
+    output eDP-1 disable
+    output DP-2 enable scale 1.0 mode 2560x1440 position 0,0
+}
+# at home 2 screens
+{
+    output eDP-1 disable
+    output DP-1 enable scale 1.0 mode 2560x1440 position 0,0
+    output HDMI-A-1 enable scale 1.0 mode 1920x1080 position 2560,0 transform 270
+}
+{
+    output eDP-1 disable
+    output DP-2 enable scale 1.0 mode 2560x1440 position 0,0
+    output HDMI-A-1 enable scale 1.0 mode 1920x1080 position 2560,0 transform 270
+}
+# end - at home 2 screens
+{
+    output eDP-1 disable
+    output DP-1 enable scale 1.0 mode 2560x1440 position 0,0
+}
+{
+    output eDP-1 disable
+    output HDMI-A-1 enable scale 1.0 mode 2560x1440 position 0,0
+}
+{
+    output eDP-1 disable
+    output HDMI-A-1 enable scale 1.0 mode 2560x1440@143.912Hz position 0,0
+}
+{
+    output eDP-1 disable
+    output DP-3 enable scale 1.0 mode 2560x1440 position 0,0
+}
+{
+    output eDP-1 disable
+    output DP-4 enable scale 1.0 mode 2560x1440 position 0,0
+}
+{
+    output eDP-1 enable scale 1.0 mode 1920x1080 position 320,1440
+    output DP-5 enable scale 1.0 mode 2560x1440 position 0,0
+}
+{
+    output eDP-1 disable
+    output DP-3 enable scale 1.0 mode 1920x1080 position 0,0
+}
+# inovex PP
+{
+    output eDP-1 disable
+    output DP-4 enable scale 1.0 mode 1920x1200 position 1920,0
+    output DP-7 enable scale 1.0 mode 1920x1080 position 3840,0
+}

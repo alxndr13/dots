@@ -1,0 +1,216 @@
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="/home/ahuck/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+#ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=30
+
+plugins=(git wd vscode sudo zsh-autosuggestions zsh-syntax-highlighting shrink-path zsh-fzf-history-search zsh-z direnv)
+
+source $ZSH/oh-my-zsh.sh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+
+export EDITOR="nvim"
+alias ll='exa -l'
+alias k='kubectl'
+source <(kubectl completion zsh)
+compdef kubecolor=kubectl
+alias kx='kubectx'
+alias kns='kubens'
+alias cat='bat -pp'
+alias pat='bat --paging=always'
+alias note='vim ~/notes.txt'
+alias td="todo.sh"
+alias pass='gopass'
+alias vi='nvim'
+alias dp='describepod'
+alias fp='findpod'
+alias tp='tailpod'
+alias vim='nvim'
+alias sudo='sudo '
+alias opsshuffle='echo "Alex\nDonato\nHekmat\nJoe\nLukas\nSimon" | shuf -n 2'
+alias watch='watch '
+alias gitdeleteorphan="git fetch -p ; git branch -r | awk '{print \$1}' | grep -E -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -D"
+alias dnsflush='systemd-resolve --flush-caches'
+alias pd='podman'
+alias htop='btm'
+alias top='btm'
+alias tf='terraform'
+alias tfi='terraform init'
+alias tfs='terraform state'
+alias tfsl='terraform state list'
+alias tfss='terraform state show'
+alias tfmt='terraform fmt'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
+alias tfaa='terraform apply --auto-approve'
+alias lz='lazygit'
+alias bton='bluetoothctl power on'
+alias btoff='bluetoothctl power off'
+alias btbose='bluetoothctl connect 60:AB:D2:41:CD:11'
+alias btbosedisc='bluetoothctl disconnect 60:AB:D2:41:CD:11'
+alias btk6='bluetoothctl connect DC:2C:26:2A:3E:00'
+alias btmx='bluetoothctl connect DA:E8:97:89:F2:96'
+alias maxuhrzeit="TZ='Pacific/Honolulu' date --rfc-email"
+alias n='nnn'
+alias st='stern'
+alias kt='kitty --detach'
+alias k9s='k9s --logoless -A'
+alias kill9='kill -9'
+alias gomobile='~/.local/bin/switch-headset-mode.sh headset-head-unit-msbc && nmcli radio wifi on'
+alias asciicast2gif='docker run --rm -v $PWD:/data asciinema/asciicast2gif'
+#alias kapitan='docker run -t --rm -v $(pwd):/src:delegated docker.markant.com/mips-ql-infra/infra-base/infra-base:stable kapitan'
+alias cal='cal -w -n 3 -m'
+alias cz='chezmoi'
+
+# markant MIPS
+alias sp_mipsqldev='az login --service-principal --username "578ae525-57f5-4c7f-8ffc-dc0a3a8f0149" --password $(gopass show -o markant/mips-ql-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
+alias sp_mipsqlinfradev='az login --service-principal --username "a69d4cab-523c-44c1-b4a7-07a0b3d0d394" --password $(gopass show -o markant/mips-ql-infra-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
+alias sp_mipsqlaccept='az login --service-principal --username "9e310bdb-6d8a-49c3-b183-67a6a66c35b4" --password $(gopass show -o markant/mips-ql-accept-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
+alias sp_mipsqlprod='az login --service-principal --username "de518d6d-2087-49ac-9547-21996c6d01c4" --password $(gopass show -o markant/mips-ql-prod-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
+alias sp_mepsqldev='az login --service-principal --username "84c4966c-f06a-4df8-a48f-794691eb48ea" --password $(gopass show -o markant/meps-ql-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
+alias sp_mepsqlaccept='az login --service-principal --username "9b27671b-c805-4110-9bf9-efc5c859cd41" --password $(gopass show -o markant/meps-ql-accept-kapitan-sp)  --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
+alias sp_mepsqlprod='az login --service-principal --username "dfe4c1ad-35eb-41c4-9a9f-27ba2a6341eb" --password $(gopass show -o markant/meps-ql-prod-kapitan-sp)  --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
+
+alias aks_mipsqldev='az aks get-credentials --subscription c1f7b4ae-cf36-4d64-a2a0-7c2c0436b968 --resource-group mips-ql-dev --name mips-ql-dev --context mips-ql-dev-aks --admin'
+alias aks_mipsqlaccept='az aks get-credentials --subscription 47059930-6096-4caf-b1eb-f8e6be6eacca --resource-group mips-ql-accept --name mips-ql-accept --context mips-ql-accept-aks --admin'
+alias aks_mipsqlprod='az aks get-credentials --subscription f2274544-d053-486a-b6ac-5e9690f411b3 --resource-group mips-ql-prod --name mips-ql-prod --context mips-ql-prod-aks --admin'
+alias aks_mepsqldev='az aks get-credentials --subscription 46a2eeaa-5043-4287-8a08-6d2253fc0bd7 --resource-group meps-ql-dev --name meps-ql-dev --context meps-ql-dev-aks --admin'
+alias aks_mepsqlaccept='az aks get-credentials --subscription 674e9a4b-bc27-47c5-81dc-434e0ec48fc2 --resource-group meps-ql-accept --name meps-ql-accept --context meps-ql-accept-aks --admin'
+alias aks_mepsqlprod='az aks get-credentials --subscription 7c93f510-dcd4-4e3f-9e72-b22748c0831c --resource-group meps-ql-prod --name meps-ql-prod --context meps-ql-prod-aks --admin'
+alias aks_mipsqlinfradev='az aks get-credentials --subscription 9573ae65-6ed0-451b-8526-d75e56ab40aa --resource-group mips-ql-infra-dev --name mips-ql-infra-dev --context mips-ql-infra-dev-aks --admin'
+
+alias tflint_odm='tflint --enable-rule terraform_deprecated_index --enable-rule terraform_unused_declarations --enable-rule terraform_comment_syntax --enable-rule terraform_documented_outputs --enable-rule terraform_documented_variables --enable-rule terraform_typed_variables --enable-rule terraform_naming_convention --disable-rule terraform_module_pinned_source --disable-rule aws_acm_certificate_invalid_private_key --enable-rule terraform_required_version --enable-rule terraform_required_providers --enable-rule terraform_standard_module_structure --enable-rule terraform_workspace_remote'
+eval "$(glab completion -s zsh)"
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+__git_files () {
+    _wanted files expl 'local files' _files
+}
+
+function kdebug() {
+  kubectl run test-pod-hucka-$RANDOM -n monitoring -ti --image docker.mirror.markant.com/alpine:latest --restart=Never --rm -- sh
+}
+
+function countnodes() {
+  kubectl get nodes | tail -n +2 | wc -l
+}
+
+function =
+{
+  echo "$@" | bc -l
+}
+
+# Load Bash Completion files in zsh
+autoload -U +X bashcompinit && bashcompinit
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
