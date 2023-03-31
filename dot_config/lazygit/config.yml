@@ -5,6 +5,9 @@ os:
   editCommand: 'nvim'
 git:
   overrideGpg: true
+  paging:
+    colorArg: always
+    pager: diff-so-fancy
 
 theme:
   lightTheme: false 
