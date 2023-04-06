@@ -208,9 +208,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="Slack"] $ws2
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
+assign [app_id="com.obsproject.Studio"] $ws8
 
 # Open specific applications in floating mode
 for_window [class="1Password"] floating enable border pixel 1
@@ -265,11 +263,11 @@ mode "resize" {
 # Lock screen
 bindsym $mod+9 exec --no-startup-id exec ~/.local/bin/lock.sh
 
-# Toggle Mic and Cam
+# Toggle Mic and AFK Mode
 bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/mic-toggle.sh
-bindsym $mod+Shift+n exec --no-startup-id ~/.local/bin/cam-toggle.sh
+bindsym $mod+Shift+n exec --no-startup-id ~/.local/bin/afk-toggle.sh
 
-bindsym $mod+Shift+s exec "flameshot gui -r | wl-copy"
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
@@ -304,6 +302,18 @@ mode "$mode_shutdown" {
     bindsym s exec systemctl suspend -i, mode "default"
     bindsym p exec poweroff
     bindsym e exec swaymsg exit, mode "default"
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+set $mode_obs OBS Scene: (a)fk, (w)ebcam, (c)offee, (s)creenshare
+
+bindsym $mod+Shift+o mode "$mode_obs"
+mode "$mode_obs" {
+    bindsym a exec obs-cli --password "xejiewoog" scene switch afk && amixer -D pulse sset Capture nocap, mode "default"
+    bindsym c exec obs-cli --password "xejiewoog" scene switch coffee, mode "default"
+    bindsym w exec obs-cli --password "xejiewoog" scene switch webcam && amixer -D pulse sset Capture cap, mode "default"
+    bindsym s exec obs-cli --password "xejiewoog" scene switch screenshare, mode "default"
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
