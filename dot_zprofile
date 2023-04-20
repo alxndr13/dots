@@ -10,6 +10,7 @@ export QT_QPA_PLATFORM=wayland
 export XDG_CURRENT_DESKTOP="sway"
 export GOPATH="/home/ahuck/go/"
 export PATH="/home/ahuck/.local/bin/:$PATH"
+export GTK_THEME="Catppuccin-Frappe-Standard-Sky-Dark"
 # https://www.reddit.com/r/kde/comments/mqpuxk/comment/guka2e2/?utm_source=share&utm_medium=web2x&context=3
 #export GTK_USE_PORTAL=1
 sway
