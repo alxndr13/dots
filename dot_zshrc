@@ -170,6 +170,7 @@ alias asciicast2gif='docker run --rm -v $PWD:/data asciinema/asciicast2gif'
 #alias kapitan='docker run -t --rm -v $(pwd):/src:delegated docker.secret_stuff.com/mips-ql-infra/infra-base/infra-base:stable kapitan'
 alias cal='cal -w -n 3 -m'
 alias cz='chezmoi'
+alias d="nvim /home/ahuck/Dokumente/nvim_zettelkasten/$(date "+%Y-%m-%d").md"
 
 # secret_stuff MIPS
 alias sp_mipsqldev='az login --service-principal --username "578ae525-57f5-4c7f-8ffc-dc0a3a8f0149" --password $(gopass show -o secret_stuff/mips-ql-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
