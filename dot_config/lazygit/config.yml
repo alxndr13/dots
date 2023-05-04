@@ -2,7 +2,7 @@ gui:
   showRandomTip: false
   showCommandLog: false
 os:
-  editCommand: 'nvim'
+  edit: 'nvim'
 git:
   overrideGpg: true
   paging:
