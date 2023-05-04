@@ -371,6 +371,5 @@ bar {
     swaybar_command waybar
 }
 
-include ./swayfx
 
 exec --no-startup-id systemctl --user restart xdg-desktop-portal
