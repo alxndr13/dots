@@ -26,7 +26,10 @@ set delete
 #set quit
 set charset = "utf-8"
 
+set mark_old=no
 
+
+macro index o "Wn"
 
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
