@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=30
 
-plugins=(wd vscode sudo zsh-autosuggestions zsh-syntax-highlighting shrink-path zsh-fzf-history-search zsh-z direnv)
+plugins=(forgit wd vscode sudo zsh-autosuggestions zsh-syntax-highlighting shrink-path zsh-fzf-history-search zsh-z direnv)
 
 source $ZSH/oh-my-zsh.sh
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
