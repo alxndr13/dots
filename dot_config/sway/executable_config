@@ -7,14 +7,10 @@ input type:keyboard xkb_capslock disabled
 
 output "*" bg ~/.wallpaper/romb.png fill
 
-# https://github.com/emersion/xdg-desktop-portal-wlr/wiki/systemd-user-services,-pam,-and-environment-variables
-exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec_always "pkill kanshi; kanshi &"
-exec_always --no-startup-id flameshot
 exec_always --no-startup-id nm-applet
 
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec solaar -w hide
 
 set $gnome-schema org.gnome.desktop.interface
@@ -69,16 +65,6 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+d exec --no-startup-id "wofi --show drun"
 
-# Reload gammastep
-bindsym $mod+Ctrl+g exec --no-startup-id "pkill gammastep; sleep 3; gammastep -O 5000K &"
-
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -173,9 +159,6 @@ bindsym $mod+Ctrl+L workspace next
 bindsym $mod+Ctrl+H workspace prev
 
 # Workspace names
-# to display names or symbols instead of plain workspace numbers you can use
-# something like: set $ws1 1:mail
-#                 set $ws2 2:
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -300,7 +283,7 @@ set $mode_shutdown Shutdown Mode: (s) suspend, (p) poweroff, (e) exit
 bindsym $mod+Shift+i mode "$mode_shutdown"
 mode "$mode_shutdown" {
     bindsym s exec systemctl suspend -i, mode "default"
-    bindsym p exec poweroff
+    bindsym p exec sudo poweroff
     bindsym e exec swaymsg exit, mode "default"
     bindsym Escape mode "default"
     bindsym Return mode "default"
@@ -332,8 +315,8 @@ mode "$mode_headset" {
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-
 bindsym $mod+Shift+g mode "$mode_gaps"
+
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
         bindsym i      mode "$mode_gaps_inner"
@@ -371,5 +354,5 @@ bar {
     swaybar_command waybar
 }
 
-
-exec --no-startup-id systemctl --user restart xdg-desktop-portal
+# https://github.com/emersion/xdg-desktop-portal-wlr/wiki/systemd-user-services,-pam,-and-environment-variables
+exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
