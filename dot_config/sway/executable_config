@@ -357,4 +357,5 @@ bar {
 # https://github.com/emersion/xdg-desktop-portal-wlr/wiki/systemd-user-services,-pam,-and-environment-variables
 exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 
+# needed for the keyring, seahorse does not know in which graphical environment we're in
 exec dbus-update-activation-environment --all
