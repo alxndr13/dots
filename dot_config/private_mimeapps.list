@@ -19,7 +19,7 @@ application/pdf=org.gnome.Evince.desktop
 application/x-bittorrent=deluge.desktop
 x-scheme-handler/webcal=chromium.desktop
 x-scheme-handler/obsidian=obsidian.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-KK1VW1.desktop
+x-scheme-handler/tg=org.telegram.desktop.desktop
 x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
 x-scheme-handler/postman=Postman.desktop
 x-scheme-handler/msteams=teams.desktop
@@ -31,3 +31,6 @@ x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/fleet=jetbrains-fleet.desktop
 inode/directory=nemo.desktop
 application/x-gnome-saved-search=nemo.desktop
+
+[Added Associations]
+x-scheme-handler/tg=org.telegram.desktop.desktop;
