@@ -1,0 +1,43 @@
+Host *
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+
+Host markhub-dev-bastion
+  Hostname bastion.weu.dev.markhub.markant.services
+  User ahuck
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+
+Host markhub-prod-bastion
+  Hostname 20.160.5.252
+  User ahuck
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+
+Host markhub-sb01-bastion
+  Hostname 52.166.252.8
+  User ahuck
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+
+Host markhub-sb02-bastion
+  Hostname 20.8.103.66
+  User ahuck
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+
+Host markhub-sb04-bastion
+  Hostname 51.136.39.99
+  User ahuck
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+
+Host markant-gitlab-dev
+  Hostname 10.1.99.38
+  User admhucka
+  Port 22
+
+Host markant-gitlab-prod
+  Hostname 10.1.99.51
+  User admhucka
+  Port 22
