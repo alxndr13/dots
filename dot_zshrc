@@ -170,6 +170,7 @@ alias asciicast2gif='docker run --rm -v $PWD:/data asciinema/asciicast2gif'
 #alias kapitan='docker run -t --rm -v $(pwd):/src:delegated docker.secret_stuff.com/mips-ql-infra/infra-base/infra-base:stable kapitan'
 alias cal='cal -w -n 3 -m'
 alias cz='chezmoi'
+alias vimdiff='nvim -d'
 alias d="nvim /home/ahuck/Dokumente/nvim_zettelkasten/$(date "+%Y-%m-%d").md"
 fcd() {
     cd "$(find ~ -maxdepth 5 -not -path '*/\.git/*' -type d | fzf --height 40% --reverse)"
