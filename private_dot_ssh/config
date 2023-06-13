@@ -32,6 +32,13 @@ Host markhub-sandbox02-bastion
   Port 22
   IdentityFile ~/.ssh/id_rsa
 
+Host markhub-sandbox02-monitoring
+  Hostname 10.2.0.23
+  User ahuck
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+  ProxyJump markhub-sandbox02-bastion
+
 Host markhub-sb04-bastion
   Hostname 51.136.39.99
   User ahuck
