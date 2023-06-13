@@ -26,6 +26,12 @@ Host markhub-sb02-bastion
   Port 22
   IdentityFile ~/.ssh/id_rsa
 
+Host markhub-sandbox02-bastion
+  Hostname bastion.weu.sandbox02.markhub.markant.services
+  User ahuck
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
+
 Host markhub-sb04-bastion
   Hostname 51.136.39.99
   User ahuck
