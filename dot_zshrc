@@ -121,6 +121,7 @@ alias ll='exa -l'
 alias k='kubectl'
 source <(kubectl completion zsh)
 compdef kubecolor=kubectl
+alias calsync="/home/ahuck/Code/oss/calendarsync/bin/calendarsync --config /home/ahuck/Code/oss/sync.yaml --storage-encryption-key $(gopass show -o calsync)"
 alias kx='kubectx'
 alias kns='kubens'
 alias cat='bat -pp'
