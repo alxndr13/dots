@@ -9,7 +9,7 @@ Host markhub-dev-bastion
   IdentityFile ~/.ssh/id_rsa
 
 Host markhub-prod-bastion
-  Hostname 20.160.5.252
+  Hostname bastion.weu.prod.markhub.secret_stuff.services
   User ahuck
   Port 22
   IdentityFile ~/.ssh/id_rsa
