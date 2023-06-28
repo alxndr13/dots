@@ -137,9 +137,6 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# 1Password quick-access
-bindsym Ctrl+space exec 1password --quick-access
-
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
