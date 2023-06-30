@@ -5,7 +5,7 @@ input * {
 
 input type:keyboard xkb_capslock disabled
 
-output "*" bg ~/.wallpaper/romb.png fill
+output "*" bg ~/.wallpaper/spaceman-mac.jpg fill
 
 exec_always "pkill kanshi; kanshi &"
 exec_always --no-startup-id nm-applet
