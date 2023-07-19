@@ -31,7 +31,8 @@ x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/fleet=jetbrains-fleet.desktop
 inode/directory=nemo.desktop
 application/x-gnome-saved-search=nemo.desktop
+video/webm=vlc.desktop
+video/mp4=vlc.desktop
 
 [Added Associations]
 x-scheme-handler/tg=org.telegram.desktop.desktop;
-video/webm=vlc.desktop
