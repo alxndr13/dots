@@ -1,5 +1,5 @@
 input * {
-    xkb_layout "euro"
+    xkb_layout "eu"
     xkb_options ctrl:nocaps
 }
 
