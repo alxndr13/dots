@@ -2,6 +2,8 @@ Host *
   StrictHostKeyChecking no
   UserKnownHostsFile=/dev/null
 
+Include ~/.ssh/markhub_sandcastle
+
 #Host markhub-dev-bastion
 #  Hostname bastion.weu.dev.markhub.secret_stuff.services
 #  User ahuck
