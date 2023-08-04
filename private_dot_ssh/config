@@ -3,6 +3,7 @@ Include ~/.ssh/markhub_sandcastle
 Host *
   StrictHostKeyChecking no
   UserKnownHostsFile=/dev/null
+  ForwardAgent yes
 
 #Host markhub-dev-bastion
 #  Hostname bastion.weu.dev.markhub.markant.services
