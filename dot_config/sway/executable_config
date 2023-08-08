@@ -245,6 +245,9 @@ mode "resize" {
 # Lock screen
 bindsym $mod+9 exec --no-startup-id exec ~/.local/bin/lock.sh
 
+# dismiss all notifications
+bindsym $mod+period exec makoctl dismiss -a
+
 # Toggle Mic and AFK Mode
 bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/mic-toggle.sh
 bindsym $mod+Shift+n exec --no-startup-id ~/.local/bin/afk-toggle.sh
