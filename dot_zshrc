@@ -179,7 +179,7 @@ fcd() {
 }
 
 untilsleep() {
-  until $1; do sleep 1; done
+  until "$1"; do sleep 1; done
 }
 
 # secret_stuff MIPS
