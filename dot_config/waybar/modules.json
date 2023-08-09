@@ -2,7 +2,7 @@
   "clock": {
     "format": " {:%d.%m %H:%M}",
     "locale": "de_DE.UTF-8",
-    "format-calendar-weeks": "{%V}|",
+    "format-calendar-weeks": "{:%V}|",
     "calendar-weeks-pos": "left",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
     "today-format": "<b>{}</b>"
