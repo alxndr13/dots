@@ -3,7 +3,7 @@ export EDITOR=/usr/bin/vim
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export GOPATH="/home/ahuck/go/"
 # fix "xdg-open fork-bomb" export your preferred browser from here
-export BROWSER=/usr/bin/chromium
+export BROWSER=/usr/bin/firefox
 export MOZ_ENABLE_WAYLAND=1
 export WLR_NO_HARDWARE_CURSORS=1
 # https://github.com/swaywm/sway/issues/595
@@ -11,7 +11,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export QT_QPA_PLATFORM=wayland
 export XDG_CURRENT_DESKTOP="sway"
 export PATH="/home/ahuck/.local/bin/:$PATH"
-export GTK_THEME="Catppuccin-Frappe-Standard-Sky-Dark"
+export GTK_THEME="Catppuccin-Frappe-Standard-Sky-dark"
 # https://www.reddit.com/r/kde/comments/mqpuxk/comment/guka2e2/?utm_source=share&utm_medium=web2x&context=3
 #export GTK_USE_PORTAL=1
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
