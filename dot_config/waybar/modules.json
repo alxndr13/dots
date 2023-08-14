@@ -31,6 +31,7 @@
     "format-full": "{icon} full at {capacity}%"
   },
   "network": {
+    "interface": "enp7s0f3u1u2",
     "format-wifi": " {essid}",
     "format-ethernet": " {ipaddr}",
     "format-linked": "{ifname} (No IP) ",
