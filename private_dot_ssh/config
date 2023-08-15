@@ -9,6 +9,8 @@ Host *
   StrictHostKeyChecking no
   UserKnownHostsFile=/dev/null
   ForwardAgent yes
+  ServerAliveInterval 15
+  ServerAliveCount 3
 
 #Host markhub-dev-bastion
 #  Hostname bastion.weu.dev.markhub.markant.services
