@@ -10,7 +10,7 @@ Host *
   UserKnownHostsFile=/dev/null
   ForwardAgent yes
   ServerAliveInterval 15
-  ServerAliveCount 3
+  ServerAliveCountMax 3
 
 #Host markhub-dev-bastion
 #  Hostname bastion.weu.dev.markhub.secret_stuff.services
