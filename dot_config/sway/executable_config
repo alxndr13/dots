@@ -250,7 +250,7 @@ bindsym $mod+9 exec --no-startup-id exec ~/.local/bin/lock.sh
 bindsym $mod+comma exec makoctl dismiss -a
 
 # open emoji picker
-bindsym $mod+/ exec emote
+bindsym $mod+slash exec emote
 
 # Toggle Mic and AFK Mode
 bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/mic-toggle.sh
