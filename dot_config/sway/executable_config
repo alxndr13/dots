@@ -203,6 +203,8 @@ for_window [app_id="Solaar"] floating enable border normal
 for_window [app_id="Solaar"] resize set 640 480
 for_window [app_id="Solaar"] move position center
 
+for_window [app_id="flameshot"] fullscreen enable global
+
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -256,7 +258,7 @@ bindsym $mod+slash exec emote
 bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/mic-toggle.sh
 bindsym $mod+Shift+n exec --no-startup-id ~/.local/bin/afk-toggle.sh
 
-bindsym $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
+bindsym $mod+Shift+s exec flameshot gui
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
