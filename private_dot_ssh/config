@@ -76,3 +76,7 @@ Host *
 #  Hostname 10.1.99.51
 #  User admhucka
 #  Port 22
+
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/aur
+  User aur
