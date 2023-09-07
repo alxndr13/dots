@@ -52,7 +52,7 @@
     "format-source": "Mic ON",
     "format-source-muted": "Mic OFF",
     "format": "{icon} {volume}% {format_source}",
-    "format-muted": "󰖁 Muted",
+    "format-muted": "🔇 Muted",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -79,7 +79,7 @@
     "on-click": "$HOME/.local/bin/toggle-vpn.sh 'inovexVPN'",
     "format": "{} inovex VPN",
     "tooltip": false,
-    "interval": 5
+    "interval": 1
   },
   "custom/bt": {
     "exec": "$HOME/.local/bin/bt-state.sh",
