@@ -68,6 +68,7 @@ window#waybar.hidden {
 #pulseaudio,
 #network,
 #clock,
+#disk,
 #tray {
   border-radius: 4px;
   margin: 6px 3px;
@@ -107,6 +108,9 @@ window#waybar.hidden {
 }
 #clock {
   background-color: @mauve;
+}
+#disk {
+  background-color: @flamingo;
 }
 #custom-vpn {
   background-color: @teal;
