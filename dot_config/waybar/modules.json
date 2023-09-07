@@ -12,6 +12,11 @@
     "on-click": "power-menu.sh",
     "format": "⏻"
   },
+  "disk": {
+    "interval": 30,
+    "format": "{percentage_used}%",
+    "path": "/"
+  },
   "battery": {
     "states": {
       "warning": 30,
