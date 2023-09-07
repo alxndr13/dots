@@ -10,9 +10,10 @@
     "sway/mode",
   ],
   "modules-center": [
-    "idle_inhibitor",
   ],
   "modules-right": [
+    "idle_inhibitor",
+    "disk",
     "battery",
     "pulseaudio",
     "custom/wttr",
