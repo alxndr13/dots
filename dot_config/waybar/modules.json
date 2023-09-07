@@ -85,7 +85,7 @@
     "exec": "$HOME/.local/bin/bt-state.sh",
     "on-click": "$HOME/.local/bin/bt-state.sh",
     "format": " {}",
-    "interval": 10,
+    "interval": 5,
     "tooltip": false
   },
   "custom/wttr": {
