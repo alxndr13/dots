@@ -14,7 +14,7 @@
   },
   "disk": {
     "interval": 30,
-    "format": "{percentage_used}%",
+    "format": " {percentage_used}%",
     "path": "/"
   },
   "battery": {
