@@ -17,6 +17,7 @@
     "pulseaudio",
     "custom/wttr",
     "network",
+    "network#tun0",
     "custom/vpn",
     "custom/bt",
     "clock",
