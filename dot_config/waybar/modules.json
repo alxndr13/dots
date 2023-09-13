@@ -47,7 +47,7 @@
     "format-wifi": " {essid}",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "",
-    "tooltip-format-wifi": "Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+    "tooltip-format-wifi": "Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}"
   },
   "network#tun0": {
     "interface": "tun0",
