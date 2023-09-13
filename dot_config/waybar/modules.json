@@ -37,18 +37,16 @@
   },
   "network": {
     "interface": "enp7s0f3u1u2",
-    "format-wifi": " {essid}",
     "format-ethernet": " {ipaddr}",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "  Disconnected",
-    "tooltip-format-wifi": "Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
     "tooltip-format-ethernet": "Interface: {ifname}"
   },
   "network#wifi": {
     "interface": "wlan0",
     "format-wifi": " {essid}",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "  Disconnected",
+    "format-disconnected": " Disconnected",
     "tooltip-format-wifi": "Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
   },
   "network#tun0": {
@@ -56,7 +54,7 @@
     "format-wifi": " {essid}",
     "format-ethernet": "VPN  {ipaddr}",
     "format-linked": "VPN {ifname} (No IP) ",
-    "format-disconnected": "VPN   Disconnected",
+    "format-disconnected": "VPN  Disconnected",
     "tooltip-format-ethernet": "Interface: {ifname}"
   },
   "backlight": {
