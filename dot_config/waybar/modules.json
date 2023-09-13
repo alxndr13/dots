@@ -39,14 +39,14 @@
     "interface": "enp7s0f3u1u2",
     "format-ethernet": " {ipaddr}",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "  Disconnected",
+    "format-disconnected": "",
     "tooltip-format-ethernet": "Interface: {ifname}"
   },
   "network#wifi": {
     "interface": "wlan0",
     "format-wifi": " {essid}",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": " Disconnected",
+    "format-disconnected": "",
     "tooltip-format-wifi": "Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
   },
   "network#tun0": {
