@@ -44,6 +44,15 @@
     "tooltip-format-wifi": "Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
     "tooltip-format-ethernet": "Interface: {ifname}"
   },
+  "network#wifi": {
+    "interface": "wlan0",
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ipaddr}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "  Disconnected",
+    "tooltip-format-wifi": "Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+    "tooltip-format-ethernet": "Interface: {ifname}"
+  },
   "network#tun0": {
     "interface": "tun0",
     "format-wifi": " {essid}",

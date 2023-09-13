@@ -18,6 +18,7 @@
     "disk",
     "custom/wttr",
     "network",
+    "network#wifi",
     "network#tun0",
     "custom/vpn",
     "custom/bt",
