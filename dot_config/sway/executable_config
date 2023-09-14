@@ -3,10 +3,11 @@ input * {
     xkb_options ctrl:nocaps
 }
 
+# https://man.archlinux.org/man/sway-input.5
 input "type:touchpad" {
    natural_scroll enabled
    tap enabled
-   scroll_factor 1.0
+   scroll_factor 0.5
 }
 
 input type:keyboard xkb_capslock disabled
