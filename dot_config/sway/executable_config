@@ -3,6 +3,10 @@ input * {
     xkb_options ctrl:nocaps
 }
 
+input "type:touchpad" {
+   natural_scroll enabled
+}
+
 input type:keyboard xkb_capslock disabled
 
 output "*" bg ~/.wallpaper/spaceman-mac.jpg fill
