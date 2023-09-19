@@ -320,7 +320,7 @@ set $mode_headset Headset Mode: (a) a2dp , (h) hsp/hfp
 
 bindsym $mod+Shift+h mode "$mode_headset"
 mode "$mode_headset" {
-    bindsym a exec ~/.local/bin/switch-headset-mode.sh "a2dp-sink-aac", mode "default"
+    bindsym a exec ~/.local/bin/switch-headset-mode.sh "a2dp-sink", mode "default"
     bindsym h exec ~/.local/bin/switch-headset-mode.sh "headset-head-unit-msbc", mode "default"
     bindsym Escape mode "default"
     bindsym Return mode "default"
