@@ -16,6 +16,8 @@ output "*" bg ~/.wallpaper/spaceman-mac.jpg fill
 
 exec_always "pkill kanshi; kanshi &"
 exec_always --no-startup-id nm-applet
+# Clipboard manager
+exec wl-paste --watch cliphist store
 
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec solaar -w hide
@@ -257,6 +259,10 @@ bindsym $mod+9 exec --no-startup-id exec ~/.local/bin/lock.sh
 
 # dismiss all notifications
 bindsym $mod+comma exec makoctl dismiss -a
+
+# clipboard manager
+# https://github.com/sentriz/cliphist
+bindsym $mod+c exec cliphist list | wofi | cliphist decode | wl-copy
 
 # open emoji picker
 bindsym $mod+slash exec emote
