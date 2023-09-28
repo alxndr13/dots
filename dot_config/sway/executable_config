@@ -262,7 +262,7 @@ bindsym $mod+comma exec makoctl dismiss -a
 
 # clipboard manager
 # https://github.com/sentriz/cliphist
-bindsym $mod+c exec cliphist list | wofi | cliphist decode | wl-copy
+bindsym $mod+c exec cliphist list | wofi --show dmenu | cliphist decode | wl-copy
 
 # open emoji picker
 bindsym $mod+slash exec emote
