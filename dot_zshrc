@@ -117,7 +117,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 
 export EDITOR="nvim"
-alias ll='eza --icons -l --time-style relative --git'
+alias ll='eza --icons -l --time-style relative --git -snew '
 alias k='kubectl'
 source <(kubectl completion zsh)
 compdef kubecolor=kubectl
