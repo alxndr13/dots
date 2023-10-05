@@ -28,7 +28,7 @@ swaylock --hide-keyboard-layout \
     --grace 1 \
     -f \
     -e \
-    -i /home/ahuck/.wallpaper/romb.png \
+    -i /home/ahuck/.wallpaper/cow-abduction.jpg \
     -s fill \
     -l \
     --fade-in 2
