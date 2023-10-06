@@ -213,7 +213,7 @@ for_window [app_id="Solaar"] floating enable border normal
 for_window [app_id="Solaar"] resize set 640 480
 for_window [app_id="Solaar"] move position center
 
-for_window [app_id="flameshot"] fullscreen enable global
+for_window [title="flameshot" class="flameshot flameshot"] fullscreen enable global
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
