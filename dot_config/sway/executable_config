@@ -17,6 +17,7 @@ output "*" bg ~/.wallpaper/cow-abduction.jpg fill
 exec_always "pkill kanshi; kanshi &"
 exec_always --no-startup-id nm-applet
 # Clipboard manager
+exec cliphist wipe
 exec wl-paste --watch cliphist store
 
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
