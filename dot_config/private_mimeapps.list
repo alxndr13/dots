@@ -33,6 +33,9 @@ inode/directory=nemo.desktop
 application/x-gnome-saved-search=nemo.desktop
 video/webm=vlc.desktop
 video/mp4=vlc.desktop
+text/plain=nvim.desktop
+application/x-shellscript=nvim.desktop
+text/markdown=nvim.desktop
 
 [Added Associations]
 x-scheme-handler/tg=org.telegram.desktop.desktop;
