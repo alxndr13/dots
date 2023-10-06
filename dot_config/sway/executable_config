@@ -74,7 +74,7 @@ bindsym $mod+Backspace exec foot
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id "wofi --show drun -H 800 -W 800"
+bindsym $mod+d exec --no-startup-id "wofi --show drun -H 400 -W 800"
 
 bindsym $mod+Ctrl+m exec pavucontrol
 
@@ -265,7 +265,7 @@ bindsym $mod+comma exec makoctl dismiss -a
 
 # clipboard manager
 # https://github.com/sentriz/cliphist
-bindsym $mod+c exec cliphist list | wofi --show dmenu -H 800 -W 800 | cliphist decode | wl-copy
+bindsym $mod+c exec cliphist list | wofi --show dmenu -H 400 -W 800 | cliphist decode | wl-copy
 
 # open emoji picker
 bindsym $mod+slash exec emote
