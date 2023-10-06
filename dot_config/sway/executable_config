@@ -214,8 +214,8 @@ for_window [app_id="Solaar"] resize set 640 480
 for_window [app_id="Solaar"] move position center
 
 for_window [title="flameshot" app_id="flameshot"] fullscreen enable global
-for_window [title="Save screenshot" app_id="flameshot"] floating enable border pixel 2
-for_window [title="Save screenshot" app_id="flameshot"] move position center
+for_window [name="Save screenshot" app_id="flameshot"] floating enable border pixel 2
+for_window [name="Save screenshot" app_id="flameshot"] move position center
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
