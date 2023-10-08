@@ -80,3 +80,6 @@ Host *
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur
   User aur
+
+Host *
+  IdentityAgent ~/.1password/agent.sock
