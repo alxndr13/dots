@@ -20,7 +20,7 @@ exec_always --no-startup-id nm-applet
 exec cliphist wipe
 exec wl-paste --watch cliphist store
 
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec solaar -w hide
 exec emote
 
@@ -385,3 +385,12 @@ exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 
 # needed for the keyring, seahorse does not know in which graphical environment we're in
 exec dbus-update-activation-environment --all
+
+
+# SwayFX settings
+
+corner_radius 5
+shadows enable
+shadow_blur_radius 10
+default_dim_inactive 1.0
+dim_inactive_colors.unfocused #000000FF
