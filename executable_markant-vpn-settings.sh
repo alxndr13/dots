@@ -7,4 +7,4 @@ fi
 
 
 sudo resolvectl dns "$1" 10.1.13.53
-sudo resolvectl domain "$1" marksys.de
+sudo resolvectl domain "$1" marksys.de azmk8s.io
