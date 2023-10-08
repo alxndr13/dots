@@ -20,7 +20,7 @@ exec_always --no-startup-id nm-applet
 exec cliphist wipe
 exec wl-paste --watch cliphist store
 
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec solaar -w hide
 exec emote
 
@@ -389,13 +389,13 @@ exec dbus-update-activation-environment --all
 
 # SwayFX settings
 
-blur on
-blur_xray off
-blur_passes 2
-blur_radius 5
-corner_radius 10
-shadows on
-shadow_blur_radius 10
-default_dim_inactive 0.2
-dim_inactive_colors.unfocused #000000FF
-dim_inactive_colors.urgent #900000FF
+#blur on
+#blur_xray off
+#blur_passes 2
+#blur_radius 5
+#corner_radius 10
+#shadows on
+#shadow_blur_radius 10
+#default_dim_inactive 0.2
+#dim_inactive_colors.unfocused #000000FF
+#dim_inactive_colors.urgent #900000FF
