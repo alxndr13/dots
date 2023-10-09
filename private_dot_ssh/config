@@ -11,6 +11,7 @@ Host *
   ForwardAgent yes
   ServerAliveInterval 15
   ServerAliveCountMax 3
+  IdentityAgent ~/.1password/agent.sock
 
 #Host markhub-dev-bastion
 #  Hostname bastion.weu.dev.markhub.secret_stuff.services
@@ -80,6 +81,3 @@ Host *
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur
   User aur
-
-Host *
-  IdentityAgent ~/.1password/agent.sock
