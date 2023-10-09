@@ -12,72 +12,8 @@ Host *
   ServerAliveInterval 15
   ServerAliveCountMax 3
   IdentityAgent ~/.1password/agent.sock
-
-#Host markhub-dev-bastion
-#  Hostname bastion.weu.dev.markhub.secret_stuff.services
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#
-#Host markhub-prod-bastion
-#  Hostname bastion.weu.prod.markhub.secret_stuff.services
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#
-#Host markhub-sb01-bastion
-#  Hostname 52.166.252.8
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#
-#Host markhub-sandbox01-bastion
-#  Hostname bastion.weu.sandbox01.markhub.secret_stuff.services
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#
-#Host markhub-sb02-bastion
-#  Hostname 20.8.103.66
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#
-#Host markhub-sandbox02-bastion
-#  Hostname bastion.weu.sandbox02.markhub.secret_stuff.services
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#
-#Host markhub-sandbox03-bastion
-#  Hostname bastion.weu.sandbox03.markhub.secret_stuff.services
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#
-#Host markhub-sandbox02-monitoring
-#  Hostname 10.2.0.23
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#  ProxyJump markhub-sandbox02-bastion
-#
-#Host markhub-sb04-bastion
-#  Hostname 51.136.39.99
-#  User ahuck
-#  Port 22
-#  IdentityFile ~/.ssh/id_rsa
-#
-#Host secret_stuff-gitlab-dev
-#  Hostname 10.1.99.38
-#  User admhucka
-#  Port 22
-#
-#Host secret_stuff-gitlab-prod
-#  Hostname 10.1.99.51
-#  User admhucka
-#  Port 22
+  IdentitiesOnly yes
 
 Host aur.archlinux.org
-  IdentityFile ~/.ssh/aur
+  IdentityFile ~/.ssh/aur.pub
   User aur
