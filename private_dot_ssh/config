@@ -17,3 +17,7 @@ Host *
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur.pub
   User aur
+
+Host alxndr13.xyz 
+  IdentityFile ~/.ssh/id_ed25519.pub
+  User hucka
