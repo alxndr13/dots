@@ -387,10 +387,6 @@ exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 # needed for the keyring, seahorse does not know in which graphical environment we're in
 exec dbus-update-activation-environment --all
 
-for_window [app_id="chromium"] gaps inner 0
-for_window [app_id="chromium"] gaps outer 0
-
-
 # SwayFX settings
 
 blur on
