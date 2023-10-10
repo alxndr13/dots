@@ -21,3 +21,4 @@ Host aur.archlinux.org
 Host alxndr13.xyz 
   IdentityFile ~/.ssh/id_ed25519.pub
   User hucka
+  Port 322
