@@ -25,7 +25,6 @@ swaylock --hide-keyboard-layout \
     --inside-wrong-color e78284 \
     --key-hl-color babbf1 \
     -n \
-    --grace 1 \
     -f \
     -e \
     -i /home/ahuck/.wallpaper/cow-abduction.jpg \
