@@ -26,15 +26,18 @@ EOF
     while IFS= read -r line; do
       sudo ip r del "$line" via 192.168.178.1
     done < /tmp/other_cidrs.txt
+    notify-send -t 5000 "Routing" "Deleted custom routes"
     exit 0
   fi
 
   while IFS= read -r line; do
     sudo ip r add "$line" via 192.168.178.1
   done < /tmp/whatsapp_cidrs.txt
+
   while IFS= read -r line; do
     sudo ip r add "$line" via 192.168.178.1
-  done < /tmp/other_cidrs
+  done < /tmp/other_cidrs.txt
+
   notify-send -t 5000 "Routing" "Enabled Custom Routes over the Home Network"
 else
   notify-send -t 5000 "Routing" "Primary IP is not from 192.168.x.x network, skipping adding new routes"
