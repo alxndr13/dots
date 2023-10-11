@@ -14,6 +14,7 @@ if [[ "$primaryIP" =~ 192.168.* ]]; then
 
   # adding other cidrs to not be routed over the VPN
   cat > /tmp/other_cidrs.txt <<EOF
+62.159.139.146/32
 62.159.139.144/32
 EOF
 
