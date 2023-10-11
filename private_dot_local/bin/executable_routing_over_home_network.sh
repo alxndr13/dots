@@ -35,7 +35,7 @@ EOF
   while IFS= read -r line; do
     sudo ip r add "$line" via 192.168.178.1
   done < /tmp/other_cidrs
-  notify-send "Routing" "Enabled Custom Routes over the Home Network"
+  notify-send -t 5000 "Routing" "Enabled Custom Routes over the Home Network"
 else
-  notify-send "Routing" "Primary IP is not from 192.168.x.x network, skipping adding new routes"
+  notify-send -t 5000 "Routing" "Primary IP is not from 192.168.x.x network, skipping adding new routes"
 fi
