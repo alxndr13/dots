@@ -45,7 +45,7 @@
   "network#wifi": {
     "interface": "wlan0",
     "format-wifi": " {essid}",
-    "format-linked": "{ifname} (No IP) ",
+    "format-linked": "",
     "format-disconnected": "",
     "tooltip-format-wifi": "Signal Strength: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}"
   },
