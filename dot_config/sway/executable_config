@@ -206,13 +206,17 @@ assign [app_id="com.obsproject.Studio"] $ws8
 # Open specific applications in floating mode
 for_window [class="1Password"] floating enable border pixel 2
 for_window [title="Calculator"] floating enable border pixel 2
-for_window [app_id="org.gnome.Calculator"] floating enable border pixel 2
 for_window [app_id="org.stronnag.wayfarer" title="Wayfarer"] floating enable border pixel 2
 
 # Solaar Window Settings
 for_window [app_id="solaar"] floating enable
 for_window [app_id="solaar"] resize set 640 480
 for_window [app_id="solaar"] move position center
+
+# Solaar Window Settings
+for_window [app_id="org.gnome.Calculator"] floating enable border pixel 2
+for_window [app_id="org.gnome.Calculator"] resize set 480 640
+for_window [app_id="org.gnome.Calculator"] move position center
 
 for_window [title="flameshot" app_id="flameshot"] fullscreen enable global
 for_window [title="^Save\ screenshot$" app_id="flameshot"] move position center
