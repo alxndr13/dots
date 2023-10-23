@@ -38,7 +38,8 @@ seat seat0 xcursor_theme Bibata-Modern-Ice
 exec swayidle -w \
 	timeout 300 '~/.local/bin/lock.sh' \
 	timeout 1805 'swaymsg "output * dpms off"' \
-	resume 'swaymsg "output * dpms on"'
+	resume 'swaymsg "output * dpms on"' \
+  before-sleep '~/.local/bin/lock.sh'
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod1
@@ -386,8 +387,6 @@ bar {
 
 # https://github.com/emersion/xdg-desktop-portal-wlr/wiki/systemd-user-services,-pam,-and-environment-variables
 exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-
-
 
 # needed for the keyring, seahorse does not know in which graphical environment we're in
 exec dbus-update-activation-environment --all
