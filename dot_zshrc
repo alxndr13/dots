@@ -181,10 +181,11 @@ fcd() {
 }
 
 untilsleep() {
-  until "$@"; do sleep 1; done
+  until "$@"; do sleep 0.5; done
 }
-untilfalse() {
-  until false; do "$@"; done
+
+untilforever() {
+  until false; do "$@"; sleep 0.5; done
 }
 
 # Markhub AKS Proxy
