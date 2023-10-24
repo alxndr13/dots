@@ -181,11 +181,11 @@ fcd() {
 }
 
 untilsleep() {
-  until "$@"; do sleep 0.5; done
+  until zsh -c "$@"; do sleep 0.5; done
 }
 
 untilforever() {
-  until false; do "$@"; sleep 0.5; done
+  until false; do zsh -c "$@"; sleep 0.5; done
 }
 
 # Markhub AKS Proxy
