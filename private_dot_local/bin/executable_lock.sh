@@ -27,7 +27,7 @@ swaylock --hide-keyboard-layout \
     -n \
     -f \
     -e \
-    -i /home/ahuck/.wallpaper/cow-abduction.jpg \
+    -i /home/ahuck/.wallpaper/glass-spiral.png \
     -s fill \
     -l \
     --fade-in 2
