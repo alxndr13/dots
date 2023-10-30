@@ -18,7 +18,8 @@ exec_always "pkill kanshi; kanshi &"
 exec_always --no-startup-id nm-applet
 # Clipboard manager
 exec cliphist wipe
-exec wl-paste --watch cliphist store
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec solaar -w hide
