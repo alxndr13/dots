@@ -27,7 +27,7 @@ swaylock --hide-keyboard-layout \
     -n \
     -f \
     -e \
-    -i /home/ahuck/.wallpaper/glass-spiral.png \
+    -i /home/ahuck/.wallpaper/iceland.jpg \
     -s fill \
     -l \
     --fade-in 2
