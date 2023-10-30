@@ -12,7 +12,7 @@ input "type:touchpad" {
 
 input type:keyboard xkb_capslock disabled
 
-output "*" bg ~/.wallpaper/spaceman-mac.jpg fill
+output "*" bg ~/.wallpaper/iceland.jpg fill
  
 exec_always "pkill kanshi; kanshi &"
 exec_always --no-startup-id nm-applet
