@@ -12,8 +12,8 @@ input "type:touchpad" {
 
 input type:keyboard xkb_capslock disabled
 
-output "*" bg ~/.wallpaper/glass-spiral.png fill
-
+output "*" bg ~/.wallpaper/spaceman-mac.jpg fill
+ 
 exec_always "pkill kanshi; kanshi &"
 exec_always --no-startup-id nm-applet
 # Clipboard manager
