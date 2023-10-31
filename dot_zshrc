@@ -180,11 +180,11 @@ fcd() {
     cd "$(find ~ -maxdepth 5 -not -path '*/\.git/*' -type d | fzf --height 40% --reverse)"
 }
 
-untilsleep() {
+until_success() {
   until zsh -c "$@"; do sleep 0.5; done
 }
 
-untilforever() {
+until_forever() {
   until false; do zsh -c "$@"; sleep 0.5; done
 }
 
