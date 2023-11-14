@@ -13,7 +13,7 @@ input "type:touchpad" {
 input type:keyboard xkb_capslock disabled
 
 output "*" bg ~/.wallpaper/iceland.jpg fill
- 
+
 exec_always "pkill kanshi; kanshi &"
 exec_always --no-startup-id nm-applet
 # Clipboard manager
@@ -71,7 +71,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec foot
 bindsym $mod+Backspace exec foot
- 
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -100,7 +100,7 @@ bindsym XF86AudioMicMute exec "~/.local/bin/mic-toggle.sh"
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec chromium
 bindsym $mod+F3 exec nautilus
-bindsym $mod+Shift+t exec chromium https://todoist.com/app/today
+bindsym $mod+Shift+t exec chromium https://todoist.com/app/upcoming
 
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
