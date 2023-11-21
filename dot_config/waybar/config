@@ -1,7 +1,7 @@
 [{
   "position": "bottom",
   "height": 20,
-  "output": ["DP-1", "eDP-1"],
+  "output": ["DP-1", "eDP-1", "DP-2"],
   "include": [
 		"~/.config/waybar/modules.json",
 	],
