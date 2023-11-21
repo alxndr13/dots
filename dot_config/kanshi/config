@@ -21,12 +21,12 @@
     output eDP-1 disable
     output DP-1 enable scale 1.0 mode 2560x1440 position 0,0
 }
-# start - Office KA-TPK, single HDMI Anschluss
+# start - Office KA-PP, eDP-1 und DP-1
 {
-    output eDP-1 enable scale 1.0 mode 1920x1080 position 330,1440
-    output HDMI-A-1 enable scale 1.0 mode 2560x1440 position 0,0
+    output eDP-1 enable scale 1.0 mode 1920x1080 position 300,1440
+    output DP-1 enable scale 1.0 mode 2560x1440 position 0,0
 }
-# end - Office KA-TPK, single HDMI Anschluss
+# end - Office KA-PP, eDP-1 und DP-1
 {
     output eDP-1 disable
     output HDMI-A-1 enable scale 1.0 mode 2560x1440@143.912Hz position 0,0
