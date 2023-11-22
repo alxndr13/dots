@@ -215,7 +215,7 @@ for_window [app_id="solaar"] resize set 640 480
 for_window [app_id="solaar"] move position center
 
 # Solaar Window Settings
-for_window [app_id="org\.gnome\.Calculator"] floating enable border pixel 2
+for_window [app_id="org\.gnome\.Calculator"] floating enable, border pixel 2
 for_window [app_id="org\.gnome\.Calculator"] resize set 480 640
 for_window [app_id="org\.gnome\.Calculator"] move position center
 
