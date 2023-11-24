@@ -194,6 +194,9 @@ until_forever() {
 
 alias markhub-aks-proxy="source /home/ahuck/Code/markant/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
 
+# Markant check elevation
+alias checkinfrapim='az ad user get-member-groups --id admhucka@de.markant.com | jq '.[] | select(.displayName == "az-rbac-pag-cloudinfra")' && if [[ $? -eq 0 ]]; then echo "user is part of az-rbac-pag-cloudinfra"; fi'
+
 # markant MIPS
 alias sp_mipsqldev='az login --service-principal --username "578ae525-57f5-4c7f-8ffc-dc0a3a8f0149" --password $(gopass show -o markant/mips-ql-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
 alias sp_mipsqlinfradev='az login --service-principal --username "a69d4cab-523c-44c1-b4a7-07a0b3d0d394" --password $(gopass show -o markant/mips-ql-infra-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
