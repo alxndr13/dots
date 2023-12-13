@@ -178,6 +178,7 @@ alias d="cd /home/ahuck/Dokumente/nvim_zettelkasten/ && nvim /home/ahuck/Dokumen
 alias m="cd /home/ahuck/Dokumente/nvim_zettelkasten/ && nvim /home/ahuck/Dokumente/nvim_zettelkasten/$(date --date=tomorrow "+%Y-%m-%d").md; cd -"
 alias dive="dive --source=podman"
 alias valevocab="chezmoi edit --apply .config/vale/styles/Vocab/MyVocab/accept.txt"
+alias wlc='wl-copy'
 fcd() {
     cd "$(find ~ -maxdepth 5 -not -path '*/\.git/*' -type d | fzf --height 40% --reverse)"
 }
