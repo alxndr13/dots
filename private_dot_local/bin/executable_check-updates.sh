@@ -11,8 +11,8 @@ if [[ -z $updates_count ]]; then
 fi
 
 if [[ $updates == "*kernel*" ]]; then
-  echo "$updates ⚠️"
+  echo "$updates_count ⚠️"
   exit 0
 fi
 
-echo "$updates"
+echo "$updates_count"
