@@ -12,6 +12,12 @@
     "on-click": "power-menu.sh",
     "format": "⏻"
   },
+  "custom/updates": {
+    "exec": "$HOME/.local/bin/check-updates.sh",
+    "format": "⬆️ {}",
+    "tooltip": false,
+    "interval": 120
+  },
   "disk": {
     "interval": 30,
     "format": " {percentage_used}%",
