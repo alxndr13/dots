@@ -62,6 +62,7 @@ window#waybar.hidden {
 #custom-vpn,
 #custom-power,
 #custom-wttr,
+#custom-updates,
 #idle_inhibitor,
 #battery,
 #backlight,
@@ -114,6 +115,9 @@ window#waybar.hidden {
 }
 #custom-vpn {
   background-color: @teal;
+}
+#custom-vpn {
+  background-color: @sky;
 }
 #custom-bt {
   background-color: @blue;
