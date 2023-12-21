@@ -9,4 +9,9 @@ if [[ -z $updates ]]; then
   exit 0
 fi
 
+if [[ $(yay -Qu) == "*kernel*" ]]; then
+  echo "$updates ⚠️"
+  exit 0
+fi
+
 echo "$updates"
