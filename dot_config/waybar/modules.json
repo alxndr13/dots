@@ -14,7 +14,7 @@
   },
   "custom/updates": {
     "exec": "$HOME/.local/bin/check-updates.sh",
-    "format": "⬆️  {}",
+    "format": "⚡️{}",
     "tooltip": false,
     "interval": 120
   },
