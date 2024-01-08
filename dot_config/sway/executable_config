@@ -98,9 +98,9 @@ bindsym XF86AudioMicMute exec "~/.local/bin/mic-toggle.sh"
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec chromium
+bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec nautilus
-bindsym $mod+Shift+t exec chromium https://todoist.com/app/upcoming
+bindsym $mod+Shift+t exec firefox https://todoist.com/app/upcoming
 
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
