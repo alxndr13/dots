@@ -266,3 +266,4 @@ bindkey '^[[Z' autosuggest-accept
 # }
 # add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 
+eval "$(atuin init zsh)"
