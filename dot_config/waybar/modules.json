@@ -28,7 +28,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}% {time}",
+    "format": "{icon}  {capacity}% {time}",
     "format-icons": [
       "",
       "",
