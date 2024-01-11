@@ -36,10 +36,10 @@
       "",
       ""
     ],
-    "format-charging": "{icon} {capacity}% {time}",
-    "format-plugged": "{icon} {capacity}%",
-    "format-alt": "{icon} {capacity}%",
-    "format-full": "{icon} full at {capacity}%"
+    "format-charging": "{icon}  {capacity}% {time}",
+    "format-plugged": "{icon}  {capacity}%",
+    "format-alt": "{icon}  {capacity}%",
+    "format-full": "{icon}  full at {capacity}%"
   },
   "network": {
     "interface": "enp7s0f3u1u2",
