@@ -210,8 +210,6 @@ alias aks_mepsqlprod='az aks get-credentials --subscription 7c93f510-dcd4-4e3f-9
 alias aks_mipsqlinfradev='az aks get-credentials --subscription 9573ae65-6ed0-451b-8526-d75e56ab40aa --resource-group mips-ql-infra-dev --name mips-ql-infra-dev --context mips-ql-infra-dev-aks --admin'
 
 alias tflint_odm='tflint --enable-rule terraform_deprecated_index --enable-rule terraform_unused_declarations --enable-rule terraform_comment_syntax --enable-rule terraform_documented_outputs --enable-rule terraform_documented_variables --enable-rule terraform_typed_variables --enable-rule terraform_naming_convention --disable-rule terraform_module_pinned_source --disable-rule aws_acm_certificate_invalid_private_key --enable-rule terraform_required_version --enable-rule terraform_required_providers --enable-rule terraform_standard_module_structure --enable-rule terraform_workspace_remote'
-eval "$(glab completion -s zsh)"
-
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -234,9 +232,6 @@ function =
 
 # Load Bash Completion files in zsh
 autoload -U +X bashcompinit && bashcompinit
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Shift Tab to accept autosuggestion
 bindkey '^[[Z' autosuggest-accept
