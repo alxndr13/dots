@@ -10,9 +10,16 @@ if [[ -z $updates_count ]]; then
   exit 0
 fi
 
-if [[ $updates == "*linux*" ]]; then
+file=$(mktemp)
+echo $updates > "$file"
+
+
+if grep -q "linux" $file; then
+  rm -f "$file"
   echo "$updates_count ⚠️"
   exit 0
 fi
 
+rm -f "$file"
 echo "$updates_count"
+exit 0
