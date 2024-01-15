@@ -73,7 +73,7 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 #ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-plugins=(git forgit wd vscode sudo zsh-autosuggestions zsh-syntax-highlighting shrink-path zsh-fzf-history-search zsh-z direnv tmux tmuxinator)
+plugins=(git vscode sudo zsh-autosuggestions zsh-syntax-highlighting shrink-path zsh-fzf-history-search zsh-z direnv)
 
 source $ZSH/oh-my-zsh.sh
 
