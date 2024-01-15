@@ -12,7 +12,6 @@ export ZSH="/home/ahuck/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -42,7 +41,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -106,7 +105,7 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND="true"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:/home/ahuck/go/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -174,9 +173,6 @@ alias dive="dive --source=podman"
 alias valevocab="chezmoi edit --apply .config/vale/styles/Vocab/MyVocab/accept.txt"
 alias wlc='wl-copy'
 alias cronlogs='journalctl -b 0 -f -n 10000 | rg -i cron'
-fcd() {
-    cd "$(find ~ -maxdepth 5 -not -path '*/\.git/*' -type d | fzf --height 40% --reverse)"
-}
 
 until_success() {
   until zsh -c "$@"; do sleep 0.5; done
@@ -195,27 +191,10 @@ func checkinfrapim () {
   az ad user get-member-groups --id admhucka@de.markant.com | jq '.[] | select(.displayName == "az-rbac-pag-cloudinfra")' && if [[ $? -eq 0 ]]; then echo "user is part of az-rbac-pag-cloudinfra"; fi
 }
 
-# markant MIPS
-alias sp_mipsqldev='az login --service-principal --username "578ae525-57f5-4c7f-8ffc-dc0a3a8f0149" --password $(gopass show -o markant/mips-ql-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
-alias sp_mipsqlinfradev='az login --service-principal --username "a69d4cab-523c-44c1-b4a7-07a0b3d0d394" --password $(gopass show -o markant/mips-ql-infra-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
-alias sp_mipsqlaccept='az login --service-principal --username "9e310bdb-6d8a-49c3-b183-67a6a66c35b4" --password $(gopass show -o markant/mips-ql-accept-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
-alias sp_mipsqlprod='az login --service-principal --username "de518d6d-2087-49ac-9547-21996c6d01c4" --password $(gopass show -o markant/mips-ql-prod-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
-alias sp_mepsqldev='az login --service-principal --username "84c4966c-f06a-4df8-a48f-794691eb48ea" --password $(gopass show -o markant/meps-ql-dev-kapitan-sp) --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
-alias sp_mepsqlaccept='az login --service-principal --username "9b27671b-c805-4110-9bf9-efc5c859cd41" --password $(gopass show -o markant/meps-ql-accept-kapitan-sp)  --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
-alias sp_mepsqlprod='az login --service-principal --username "dfe4c1ad-35eb-41c4-9a9f-27ba2a6341eb" --password $(gopass show -o markant/meps-ql-prod-kapitan-sp)  --tenant "eba24dc8-c5d5-4c1d-983b-425101d720ba"'
-
-alias aks_mipsqldev='az aks get-credentials --subscription c1f7b4ae-cf36-4d64-a2a0-7c2c0436b968 --resource-group mips-ql-dev --name mips-ql-dev --context mips-ql-dev-aks --admin'
-alias aks_mipsqlaccept='az aks get-credentials --subscription 47059930-6096-4caf-b1eb-f8e6be6eacca --resource-group mips-ql-accept --name mips-ql-accept --context mips-ql-accept-aks --admin'
-alias aks_mipsqlprod='az aks get-credentials --subscription f2274544-d053-486a-b6ac-5e9690f411b3 --resource-group mips-ql-prod --name mips-ql-prod --context mips-ql-prod-aks --admin'
-alias aks_mepsqldev='az aks get-credentials --subscription 46a2eeaa-5043-4287-8a08-6d2253fc0bd7 --resource-group meps-ql-dev --name meps-ql-dev --context meps-ql-dev-aks --admin'
-alias aks_mepsqlaccept='az aks get-credentials --subscription 674e9a4b-bc27-47c5-81dc-434e0ec48fc2 --resource-group meps-ql-accept --name meps-ql-accept --context meps-ql-accept-aks --admin'
-alias aks_mepsqlprod='az aks get-credentials --subscription 7c93f510-dcd4-4e3f-9e72-b22748c0831c --resource-group meps-ql-prod --name meps-ql-prod --context meps-ql-prod-aks --admin'
-alias aks_mipsqlinfradev='az aks get-credentials --subscription 9573ae65-6ed0-451b-8526-d75e56ab40aa --resource-group mips-ql-infra-dev --name mips-ql-infra-dev --context mips-ql-infra-dev-aks --admin'
-
 alias tflint_odm='tflint --enable-rule terraform_deprecated_index --enable-rule terraform_unused_declarations --enable-rule terraform_comment_syntax --enable-rule terraform_documented_outputs --enable-rule terraform_documented_variables --enable-rule terraform_typed_variables --enable-rule terraform_naming_convention --disable-rule terraform_module_pinned_source --disable-rule aws_acm_certificate_invalid_private_key --enable-rule terraform_required_version --enable-rule terraform_required_providers --enable-rule terraform_standard_module_structure --enable-rule terraform_workspace_remote'
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 __git_files () {
     _wanted files expl 'local files' _files
 }
