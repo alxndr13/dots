@@ -10,7 +10,7 @@ if [[ -z $updates_count ]]; then
   exit 0
 fi
 
-if [[ $updates == "*kernel*" ]]; then
+if [[ $updates == "*linux*" ]]; then
   echo "$updates_count ⚠️"
   exit 0
 fi
