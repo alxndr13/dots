@@ -111,7 +111,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"
 alias ll='eza --icons -l --time-style relative --git -snew '
 alias k='kubectl'
-source <(kubectl completion zsh)
+# source <(kubectl completion zsh)
 compdef kubecolor=kubectl
 alias calsync="~/calendarsync.sh"
 alias standup='git-standup -d 1 -s'
@@ -185,7 +185,7 @@ until_forever() {
 
 # Markhub AKS Proxy
 
-alias markhub-aks-proxy="source /home/ahuck/Code/secret_stuff/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
+# alias markhub-aks-proxy="source /home/ahuck/Code/secret_stuff/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
 
 # secret_stuff check elevation
 func checkinfrapim () {
