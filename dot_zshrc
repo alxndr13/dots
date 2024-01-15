@@ -121,8 +121,7 @@ alias ll='eza --icons -l --time-style relative --git -snew '
 alias k='kubectl'
 source <(kubectl completion zsh)
 compdef kubecolor=kubectl
-alias calsync="systemctl start --user calendarsync.service"
-alias calsynclogs='journalctl --user -u calendarsync.service -f'
+alias calsync="~/calendarsync.sh"
 alias standup='git-standup -d 1 -s'
 alias kx='kubectx'
 alias kns='kubens'
