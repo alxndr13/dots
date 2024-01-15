@@ -1,6 +1,8 @@
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
