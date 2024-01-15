@@ -12,7 +12,6 @@ export ZSH="/home/ahuck/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-ZSH_AUTOSUGGEST_MANUAL_REBIND="true"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,6 +74,7 @@ DISABLE_AUTO_UPDATE="true"
 #ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=30
+ZSH_AUTOSUGGEST_MANUAL_REBIND="true"
 
 plugins=(git forgit wd vscode sudo zsh-autosuggestions zsh-syntax-highlighting shrink-path zsh-fzf-history-search zsh-z direnv tmux tmuxinator)
 
