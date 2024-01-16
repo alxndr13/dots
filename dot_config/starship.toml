@@ -12,7 +12,8 @@ add_newline = true
 [package]
 disabled = true
 
-# ~/.config/starship.toml
+[git_status]
+format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($style) )'
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
