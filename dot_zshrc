@@ -16,7 +16,7 @@ export EDITOR="nvim"
 alias ll='eza --icons -l --time-style relative --git -snew '
 alias k='kubectl'
 # source <(kubectl completion zsh)
-compdef kubecolor=kubectl
+# compdef kubecolor=kubectl
 alias calsync="~/calendarsync.sh"
 alias standup='git-standup -d 1 -s'
 alias kx='kubectx'
