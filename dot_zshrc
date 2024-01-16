@@ -6,8 +6,8 @@ source $HOME/.antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
-antigen bundle zsh-autosuggestions
-antigen bundle zsh-fzf-history-search
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-fzf-history-search
 antigen bundle zsh-users/zsh-z
 
 antigen apply
