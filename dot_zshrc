@@ -6,6 +6,7 @@ source $HOME/.antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
+antigen bundle sudo
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle joshskidmore/zsh-fzf-history-search
 antigen bundle zdharma-continuum/fast-syntax-highlighting
