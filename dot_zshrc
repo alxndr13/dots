@@ -3,11 +3,14 @@
 
 source $HOME/.antigen.sh
 
+antigen use oh-my-zsh
+
 antigen bundle git
 antigen bundle zsh-autosuggestions
 antigen bundle zsh-fzf-history-search
 antigen bundle zsh-z
 
+antigen apply
 
 # plugins=(git vscode sudo zsh-autosuggestions zsh-syntax-highlighting shrink-path zsh-fzf-history-search zsh-z direnv)
 #
