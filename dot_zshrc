@@ -8,7 +8,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-autosuggestions
 antigen bundle zsh-fzf-history-search
-antigen bundle zsh-z
+antigen bundle zsh-users/zsh-z
 
 antigen apply
 
