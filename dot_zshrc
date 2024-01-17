@@ -1,18 +1,20 @@
-zmodload zsh/zprof
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
-source $HOME/.antigen.zsh
+antidote load
 
-antigen use oh-my-zsh
-
-antigen bundle git
-antigen bundle sudo
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle joshskidmore/zsh-fzf-history-search
-antigen bundle zdharma-continuum/fast-syntax-highlighting
-antigen bundle ptavares/zsh-z
-antigen bundle mroth/evalcache
-
-antigen apply
+# source $HOME/.antigen.zsh
+#
+# antigen use oh-my-zsh
+#
+# antigen bundle git
+# antigen bundle sudo
+# antigen bundle zsh-users/zsh-autosuggestions
+# antigen bundle joshskidmore/zsh-fzf-history-search
+# antigen bundle zdharma-continuum/fast-syntax-highlighting
+# antigen bundle ptavares/zsh-z
+# antigen bundle mroth/evalcache
+#
+# antigen apply
 
 
 export PATH=$PATH:/home/ahuck/go/bin
