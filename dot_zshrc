@@ -3,10 +3,8 @@ day_of_year=$(stat -c %Y $HOME/.zcompdump | xargs -I {} date -d @{} +%j)
 if [ $(date +'%j') != $day_of_year ]; then
   compinit
 else
-  echo "compinit -C"
   compinit -C
 fi
-
 
 source '/usr/share/zsh-antidote/antidote.zsh'
 
