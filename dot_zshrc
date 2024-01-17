@@ -1,5 +1,6 @@
 autoload -Uz compinit
-if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' $HOME/.zcompdump) ]; then
+day_of_year=$(stat -c %Y $HOME/.zcompdump | xargs -I {} date -d @{} +%j)
+if [ $(date +'%j') != $day_of_year ]; then
   compinit
 else
   compinit -C
