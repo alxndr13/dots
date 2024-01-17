@@ -57,7 +57,7 @@
   },
   "network#tun0": {
     "interface": "tun0",
-    "format-ethernet": "  VPN {ipaddr}",
+    "format-ethernet": " VPN {ipaddr}",
     "format-linked": "VPN {ifname} (No IP) ",
     "format-disconnected": "",
     "tooltip-format-ethernet": "Interface: {ifname}"
