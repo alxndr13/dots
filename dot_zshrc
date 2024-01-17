@@ -14,16 +14,15 @@ antigen bundle ptavares/zsh-z
 
 antigen apply
 
-# plugins=(git vscode sudo zsh-autosuggestions zsh-syntax-highlighting shrink-path zsh-fzf-history-search zsh-z direnv)
-#
-# ZSH_AUTOSUGGEST_STRATEGY=(history)
-# ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=30
-# ZSH_AUTOSUGGEST_MANUAL_REBIND="true"
+export MCFLY_FUZZY=2
+export MCFLY_RESULTS=20
+export MCFLY_INTERFACE_VIEW=BOTTOM
+export MCFLY_PROMPT="❯"
+eval "$(mcfly init zsh)"
 
 export PATH=$PATH:/home/ahuck/go/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-
 
 export EDITOR="nvim"
 alias ll='eza --icons -l --time-style relative --git -snew '
