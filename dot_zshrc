@@ -1,5 +1,3 @@
-autoload -Uz compinit
-compinit
 
 source '/usr/share/zsh-antidote/antidote.zsh'
 
@@ -128,3 +126,6 @@ export MCFLY_RESULTS=20
 export MCFLY_INTERFACE_VIEW=BOTTOM
 export MCFLY_PROMPT="❯"
 _evalcache mcfly init zsh
+
+autoload -Uz compinit
+compinit
