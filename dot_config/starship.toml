@@ -21,7 +21,7 @@ format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = '[🍒 PICKING](bold red)'
 
 [time]
-disabled = false
+disabled = true
 format = '[\[$time\]]($style) '
 time_format = '%T'
 
