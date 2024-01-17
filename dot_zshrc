@@ -140,5 +140,6 @@ export MCFLY_FUZZY=2
 export MCFLY_RESULTS=20
 export MCFLY_INTERFACE_VIEW=BOTTOM
 export MCFLY_PROMPT="❯"
+export MCFLY_KEY_SCHEME=vim
 _evalcache mcfly init zsh
 
