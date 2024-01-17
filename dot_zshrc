@@ -133,7 +133,7 @@ bindkey '^[[Z' autosuggest-accept
 # CTRL+ arrow keys for word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-bindkey "^[." copy-prev-shell-word
+bindkey "^[." insert-last-word
 
 _evalcache starship init zsh
 
