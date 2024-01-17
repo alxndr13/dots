@@ -128,7 +128,7 @@ function =
 # Shift Tab to accept autosuggestion
 bindkey '^[[Z' autosuggest-accept
 
-_evalcache "$(starship init zsh)"
+_evalcache starship init zsh
 
 ## direnv
 _evalcache direnv hook zsh
@@ -137,4 +137,4 @@ export MCFLY_FUZZY=2
 export MCFLY_RESULTS=20
 export MCFLY_INTERFACE_VIEW=BOTTOM
 export MCFLY_PROMPT="❯"
-_evalcache "$(mcfly init zsh)"
+_evalcache mcfly init zsh
