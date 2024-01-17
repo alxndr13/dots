@@ -1,6 +1,4 @@
 autoload -Uz compinit
-compinit
-
 
 source '/usr/share/zsh-antidote/antidote.zsh'
 
