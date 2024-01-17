@@ -1,3 +1,10 @@
+autoload -Uz compinit
+if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
+
 
 source '/usr/share/zsh-antidote/antidote.zsh'
 
@@ -127,5 +134,3 @@ export MCFLY_INTERFACE_VIEW=BOTTOM
 export MCFLY_PROMPT="❯"
 _evalcache mcfly init zsh
 
-autoload -Uz compinit
-compinit
