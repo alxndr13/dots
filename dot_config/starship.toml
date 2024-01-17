@@ -1,6 +1,7 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+palette = "catppuccin_frappe"
 # Inserts a blank line between shell prompts
 add_newline = true
 
@@ -32,7 +33,6 @@ truncation_symbol = '…/'
 min_time = 500
 format = 'took [$duration]($style) '
 
-palette = "catppuccin_frappe"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
