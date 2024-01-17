@@ -14,11 +14,6 @@ antigen bundle ptavares/zsh-z
 
 antigen apply
 
-export MCFLY_FUZZY=2
-export MCFLY_RESULTS=20
-export MCFLY_INTERFACE_VIEW=BOTTOM
-export MCFLY_PROMPT="❯"
-eval "$(mcfly init zsh)"
 
 export PATH=$PATH:/home/ahuck/go/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -133,3 +128,9 @@ function =
 bindkey '^[[Z' autosuggest-accept
 
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
+export MCFLY_FUZZY=2
+export MCFLY_RESULTS=20
+export MCFLY_INTERFACE_VIEW=BOTTOM
+export MCFLY_PROMPT="❯"
+eval "$(mcfly init zsh)"
