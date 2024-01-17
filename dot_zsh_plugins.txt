@@ -1,0 +1,7 @@
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/sudo
+zsh-users/zsh-autosuggestions
+joshskidmore/zsh-fzf-history-search
+zdharma-continuum/fast-syntax-highlighting
+ptavares/zsh-z
+mroth/evalcache
