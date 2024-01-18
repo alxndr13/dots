@@ -14,7 +14,7 @@ add_newline = false
 disabled = true
 
 [git_status]
-format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($style) )'
+format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($peach) )'
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
