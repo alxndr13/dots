@@ -17,11 +17,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # History Settings
 export HISTFILE=$HOME/.zsh_history
-export HISTFILESIZE=1000000000
-export HISTSIZE=1000000000
-setopt append_history
-setopt extended_history
-setopt share_history
+export HISTSIZE=100000
+# setopt append_history
+# setopt extended_history
+# setopt share_history
 
 export EDITOR="nvim"
 alias ll='eza --icons -l --time-style relative --git -snew '
