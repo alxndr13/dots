@@ -139,6 +139,8 @@ _evalcache starship init zsh
 
 ## direnv
 _evalcache direnv hook zsh
+## zoxide
+_evalcache zoxide init zsh
 
 # export MCFLY_FUZZY=2
 # export MCFLY_RESULTS=20
