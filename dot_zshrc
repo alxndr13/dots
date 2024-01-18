@@ -18,6 +18,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # History Settings
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
+SAVEHIST=100000
 # setopt append_history
 # setopt extended_history
 # setopt share_history
