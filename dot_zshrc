@@ -22,7 +22,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # setopt INC_APPEND_HISTORY
 # setopt EXTENDED_HISTORY
 
-HISTFILE=/specify/a/fixed/and/different/location/.history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=500000
 SAVEHIST=500000
 setopt appendhistory
