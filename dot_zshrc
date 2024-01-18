@@ -21,7 +21,6 @@ export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
 setopt APPEND_HISTORY
 setopt EXTENDED_HISTORY
-setopt HIST_IGNORE_ALL_DUPS
 
 export EDITOR="nvim"
 alias ll='eza --icons -l --time-style relative --git -snew '
