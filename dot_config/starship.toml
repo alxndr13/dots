@@ -17,15 +17,16 @@ disabled = true
 format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($peach) )'
 
 [git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = '[🍒 PICKING](bold red)'
+format = '[\($state( $progress_current of $progress_total)\)]($red) '
+cherry_pick = '[🍒 PICKING]($red)'
 
 [time]
 disabled = true
-format = '[\[$time\]]($style) '
+format = '[\[$time\]]($base) '
 time_format = '%T'
 
 [directory]
+format = '[$path]($blue)[$read_only]($red) '
 truncation_length = 8
 truncation_symbol = '…/'
 
