@@ -14,11 +14,14 @@ add_newline = false
 disabled = true
 
 [git_status]
-format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($peach) )'
+format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]](peach) )'
 
 [git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($red) '
+format = '[\($state( $progress_current of $progress_total)\)](red) '
 cherry_pick = '[🍒 PICKING]($red)'
+
+[git_branch]
+format = 'on [$symbol$branch(:$remote_branch)](green) '
 
 [time]
 disabled = true
