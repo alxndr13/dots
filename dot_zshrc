@@ -23,6 +23,10 @@ setopt appendhistory
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
+unsetopt flow_control
+setopt autocd
+
+
 export EDITOR="nvim"
 alias ll='eza --icons -l --time-style relative --git -snew '
 alias k='kubectl'
