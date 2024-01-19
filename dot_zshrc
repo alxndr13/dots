@@ -25,6 +25,7 @@ setopt SHARE_HISTORY
 
 unsetopt flow_control
 setopt autocd
+zstyle ':completion:*:ls:*' file-patterns '*(/):directories'
 
 
 export EDITOR="nvim"
