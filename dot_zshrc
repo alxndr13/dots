@@ -25,8 +25,10 @@ setopt SHARE_HISTORY
 
 unsetopt flow_control
 setopt autocd
-zstyle ':completion:*:ls:*' file-patterns '*(/):directories'
-
+# autocomplete only dirs on cd
+zstyle ':completion:*:cd:*' file-patterns '*(/):directories'
+# allow autocomplete on 'cd ..<TAB>'
+zstyle ':completion:*' special-dirs true
 
 export EDITOR="nvim"
 alias ll='eza --icons -l --time-style relative --git -snew '
