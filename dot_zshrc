@@ -23,6 +23,8 @@ setopt appendhistory
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
+ZSH_FZF_HISTORY_SEARCH_DATES_IN_SEARCH=0
+
 unsetopt flow_control
 setopt autocd
 # autocomplete only dirs on cd
