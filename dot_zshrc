@@ -32,7 +32,7 @@ zstyle ':completion:*' special-dirs true
 
 export EDITOR="nvim"
 alias ll='eza --icons -l --time-style relative --git -snew '
-alias cdmktemp='cd $(mktemp -d)'
+alias cdmktemp="cd $(mktemp -d)"
 alias k='kubectl'
 # source <(kubectl completion zsh)
 # compdef kubecolor=kubectl
