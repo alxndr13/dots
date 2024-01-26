@@ -27,7 +27,7 @@ swaylock --hide-keyboard-layout \
     -n \
     -f \
     -e \
-    -i /home/ahuck/.wallpaper/eagles_helmet.jpg \
+    -i /home/ahuck/.wallpaper/minecraft-2560x1440-v0-pn87fxr4yh8c1.jpeg \
     -s fill \
     -l \
     --fade-in 2
