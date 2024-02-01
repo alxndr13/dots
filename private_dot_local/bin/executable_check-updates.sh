@@ -14,7 +14,7 @@ file=$(mktemp)
 echo $updates > "$file"
 
 
-if grep -q "linux" $file; then
+if grep -q "linux-lts" $file; then
   rm -f "$file"
   echo "$updates_count ⚠️"
   exit 0
