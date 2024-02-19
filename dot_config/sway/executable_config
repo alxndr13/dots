@@ -395,7 +395,7 @@ exec dbus-update-activation-environment --all
 
 blur enable
 blur_xray disable
-blur_passes 4
+blur_passes 10
 blur_radius 5
 corner_radius 10
 shadows on
@@ -403,3 +403,4 @@ shadow_blur_radius 10
 default_dim_inactive 0.15
 dim_inactive_colors.unfocused #000000FF
 dim_inactive_colors.urgent #900000FF
+layer_effects "waybar" blur enable
