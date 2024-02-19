@@ -394,7 +394,7 @@ exec dbus-update-activation-environment --all
 # SwayFX settings
 
 blur enable
-blur_xray disable
+blur_xray enable
 blur_passes 10
 blur_radius 5
 corner_radius 10
