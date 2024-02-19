@@ -97,8 +97,8 @@ alias valevocab="chezmoi edit --apply .config/vale/styles/Vocab/MyVocab/accept.t
 alias wlc='wl-copy'
 alias cronlogs='journalctl -b 0 -f -n 10000 | rg -i cron'
 
-alias jirfr="jira sprint list --current -q 'status=\"Ready to Review\"'"
-alias jsl="jira sprint list --order-by status --current"
+alias jirfr="jira sprint list --current --order-by status -q 'status=\"Ready to Review\"'"
+alias jsl="jira sprint list --order-by status --current -q 'type != Sub-task'"
 alias jic="jira issue create -t Story --web"
 
 until_success() {
