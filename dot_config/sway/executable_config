@@ -307,7 +307,7 @@ smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders no_gaps
+smart_borders off
 
 set $mode_shutdown Shutdown Mode: (s) suspend, (p) poweroff, (e) exit
 
