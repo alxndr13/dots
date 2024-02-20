@@ -4,7 +4,7 @@ file=/tmp/check-updates-list
 
 if [ "$1" = "list" ]; then
   cat "$file"
-  return 0
+  exit 0
 fi
 
 yay -Sy > /dev/null 2>&1
