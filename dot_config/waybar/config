@@ -19,7 +19,6 @@
     "custom/wttr",
     "network",
     "network#wifi",
-    "network#tun0",
     "custom/vpn",
     "custom/updates",
     "custom/bt",
