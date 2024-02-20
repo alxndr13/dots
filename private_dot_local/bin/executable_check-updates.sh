@@ -1,30 +1,19 @@
 #!/bin/bash
 
-file=/tmp/check-updates-list
-
-if [ "$1" = "list" ]; then
-  cat "$file"
-  exit 0
-fi
-
 yay -Sy > /dev/null 2>&1
 
-updates="$(yay -Qu)"
+updates="$(checkupdates)"
 updates_count=$(echo "$updates" | wc -l)
 
 if [[ -z $updates_count ]]; then
-  echo 0
+  echo '{"text": "0", "tooltip": "zero updates"}'
   exit 0
 fi
 
-echo "$updates" > "$file"
-
-
-if grep -q "linux-lts" $file; then
-  rm -f "$file"
-  echo "$updates_count ⚠️"
+if grep -q "linux-lts" "$updates"; then
+  echo "{\"text\": \"$updates_count ⚠️\", \"tooltip\": \"$updates\"}"
   exit 0
 fi
 
-echo "$updates_count"
+echo "{\"text\": \"$updates_count\", \"tooltip\": \"$updates\"}"
 exit 0
