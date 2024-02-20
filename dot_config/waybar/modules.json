@@ -103,7 +103,7 @@
     "on-click": "$HOME/.local/bin/toggle-vpn.sh 'inovexVPN'",
     "format": "{} inovex VPN",
     "return-type": "json",
-    "tooltip": false,
+    "tooltip": true,
     "interval": 1
   },
   "custom/bt": {
