@@ -1,8 +1,8 @@
-#
-!/bin/bash
+#!/bin/bash
+
 file=/tmp/check-updates-list
 
-if [ $1 == "list" ]; then
+if [ "$1" = "list" ]; then
   cat "$file"
   return 0
 fi
@@ -17,7 +17,7 @@ if [[ -z $updates_count ]]; then
   exit 0
 fi
 
-echo $updates > "$file"
+echo "$updates" > "$file"
 
 
 if grep -q "linux-lts" $file; then
