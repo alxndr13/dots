@@ -3,6 +3,7 @@
 yay -Sy > /dev/null 2>&1
 
 updates="$(checkupdates)"
+updates_escaped=${updates//$'\n'/\\n}
 updates_count=$(echo "$updates" | wc -l)
 
 if [[ -z $updates_count ]]; then
@@ -11,9 +12,9 @@ if [[ -z $updates_count ]]; then
 fi
 
 if grep -q "linux-lts" "$updates"; then
-  echo "{\"text\": \"$updates_count ⚠️\", \"tooltip\": \"$updates\",\"class\":\"\$class\"}"
+  echo "{\"text\": \"$updates_count ⚠️\", \"tooltip\": \"$updates_escaped\",\"class\":\"\$class\"}"
   exit 0
 fi
 
-echo "{\"text\": \"$updates_count\", \"tooltip\": \"$updates\",\"class\":\"\$class\"}"
+echo "{\"text\": \"$updates_count\", \"tooltip\": \"$updates_escaped\",\"class\":\"\$class\"}"
 exit 0
