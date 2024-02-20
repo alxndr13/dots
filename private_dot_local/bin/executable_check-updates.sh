@@ -26,6 +26,5 @@ if grep -q "linux-lts" $file; then
   exit 0
 fi
 
-rm -f "$file"
 echo "$updates_count"
 exit 0
