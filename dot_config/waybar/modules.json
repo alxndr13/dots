@@ -15,7 +15,8 @@
   "custom/updates": {
     "exec": "$HOME/.local/bin/check-updates.sh",
     "format": "⚡️ {}",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "$HOME/.local/bin/check-updates.sh list",
     "interval": 120
   },
   "disk": {
