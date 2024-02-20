@@ -16,8 +16,8 @@
     "exec": "$HOME/.local/bin/check-updates.sh",
     "format": "⚡️ {}",
     "tooltip": true,
-    "tooltip-format": "$HOME/.local/bin/check-updates.sh list",
-    "interval": 120
+    "interval": 120,
+    "return-type": "json"
   },
   "disk": {
     "interval": 30,
