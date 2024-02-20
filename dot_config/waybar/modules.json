@@ -102,6 +102,7 @@
     "exec": "$HOME/.local/bin/vpn-state.sh 'inovexVPN'",
     "on-click": "$HOME/.local/bin/toggle-vpn.sh 'inovexVPN'",
     "format": "{} inovex VPN",
+    "return-type": "json",
     "tooltip": false,
     "interval": 1
   },
