@@ -282,7 +282,7 @@ bindsym $mod+Shift+n exec --no-startup-id ~/.local/bin/afk-toggle.sh
 
 #bindsym $mod+Shift+s exec flameshot gui
 #bindsym $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
-bindsym $mod+Shift+s exec grim -g "$(slurp -o -r -c '#ff0000ff')" - | satty --filename - --output-filename ~/Dokumente/screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png --copy-command wl-copy
+bindsym $mod+Shift+s exec grim -g "$(slurp -o -r -c '#ff0000ff')" - | satty --filename - --output-filename ~/Dokumente/screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png --copy-command wl-copy --early-exit
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
