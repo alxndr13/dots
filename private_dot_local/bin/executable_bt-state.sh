@@ -10,5 +10,5 @@ if [[ $(bluetoothctl show | grep Powered | tr -d '\t' | cut -d " " -f 2) = "yes"
     string="$string -  🐭 ($percentage)"
   fi
 else
-  echo "OFF"
+  echo "❌"
 fi
