@@ -111,7 +111,8 @@
     "on-click": "$HOME/.local/bin/bt-state.sh",
     "format": " {}",
     "interval": 5,
-    "tooltip": false
+    "tooltip": true,
+    "return-type": "json"
   },
   "custom/wttr": {
     "exec": "$HOME/.local/bin/wttr-in.sh",
