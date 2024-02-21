@@ -114,10 +114,11 @@
     "tooltip": false
   },
   "custom/wttr": {
-    "exec": "curl wttr.in/Mannheim?format='%c%t+💧+%h\\n'",
+    "exec": "$HOME/.local/bin/wttr-in.sh",
     "format": "{}",
     "interval": 1200,
-    "tooltip": false
+    "tooltip": true,
+    "return-type":"json"
   },
   "tray": {
     "icon-size": 21,
