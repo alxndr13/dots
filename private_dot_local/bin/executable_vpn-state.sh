@@ -14,7 +14,7 @@ if [ -z "$ACTIVE" ]
 then
     echo "{\"text\": \"\", \"tooltip\": \"not connected\"}"
 else
-    echo "{\"text\": \"\", \"tooltip\": \"IP: $IP\"}"
+    jo text= tooltip="IP: $IP"
 fi
 
 exit 0
