@@ -104,7 +104,7 @@
     "format": "{} inovex VPN",
     "return-type": "json",
     "tooltip": true,
-    "interval": 1
+    "interval": 5
   },
   "custom/bt": {
     "exec": "$HOME/.local/bin/bt-state.sh",
@@ -116,7 +116,7 @@
   "custom/wttr": {
     "exec": "$HOME/.local/bin/wttr-in.sh",
     "format": "{}",
-    "interval": 12,
+    "interval": 1200,
     "tooltip": true,
     "return-type":"json"
   },
