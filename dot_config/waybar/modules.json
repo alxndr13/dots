@@ -116,7 +116,7 @@
   "custom/wttr": {
     "exec": "$HOME/.local/bin/wttr-in.sh",
     "format": "{}",
-    "interval": 1200,
+    "interval": 12,
     "tooltip": true,
     "return-type":"json"
   },
