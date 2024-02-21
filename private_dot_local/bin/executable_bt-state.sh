@@ -15,7 +15,7 @@ if [[ $(bluetoothctl show | grep Powered | tr -d '\t' | cut -d " " -f 2) = "yes"
   fi
 
 
-  jo text="$string" tooltip=" 🎧 ($headsetpercentage%)\n 🐭 ($mousepercentage%)"
+  jo text="$string" tooltip=" 🎧 ($headsetpercentage%)\\n 🐭 ($mousepercentage%)"
 else
   jo text="󰤂"
 fi
