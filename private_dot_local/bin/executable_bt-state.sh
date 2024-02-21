@@ -1,4 +1,6 @@
 #!/bin/bash
+
+string=""
 if [[ $(bluetoothctl show | grep Powered | tr -d '\t' | cut -d " " -f 2) = "yes" ]]; then
   string="󰤁"
   if bluetoothctl info 60:AB:D2:41:CD:11 | grep Connected | tr -d '[:space:]'| cut -d":" -f 2 | grep yes > /dev/null 2>&1; then
