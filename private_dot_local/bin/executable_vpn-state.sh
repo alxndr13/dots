@@ -12,7 +12,7 @@ IP=$(nmcli con show "$VPN"| rg "IP4.ADDRESS" | tr -d " " | rg '\d{1,3}\.\d{1,3}\
 
 if [ -z "$ACTIVE" ]
 then
-    echo "{\"text\": \"\", \"tooltip\": \"not connected\"}"
+    jo text= tooltip="not connected"
 else
     jo text= tooltip="IP: $IP"
 fi
