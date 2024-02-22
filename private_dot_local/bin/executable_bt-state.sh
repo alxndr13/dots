@@ -14,7 +14,7 @@ if [[ $(bluetoothctl show | grep Powered | tr -d '\t' | cut -d " " -f 2) = "yes"
   if bluetoothctl info DC:54:35:A3:35:EB | grep Connected | tr -d '[:space:]'| cut -d":" -f 2 | grep yes > /dev/null 2>&1; then
     mousepercentage=$(bluetoothctl info DC:54:35:A3:35:EB | rg Battery | rg  "\((?P<percentage>\d{2})\)" -or "\$1")
     string="$string -  🐭"
-    tooltipstring=" 🐭 ($mousepercentage%)"
+    tooltipstring="$tooltipstring -  🐭 ($mousepercentage%)"
   fi
 
 
