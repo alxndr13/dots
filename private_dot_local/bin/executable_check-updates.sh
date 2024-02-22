@@ -11,8 +11,9 @@ if [[ -z $updates_count ]]; then
   exit 0
 fi
 
-if grep -q "linux-lts" "$updates"; then
-  echo "{\"text\": \"$updates_count ⚠️\", \"tooltip\": \"$updates_escaped\",\"class\":\"\$class\"}"
+if echo "$updates" | grep -q "linux-lts"; then
+  echo test
+  jo text="$updates_count ⚠️" tooltip="$updates_escaped" class="\$class"
   exit 0
 fi
 
