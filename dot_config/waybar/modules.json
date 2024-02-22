@@ -73,6 +73,8 @@
     "on-click": "pavucontrol",
     "scroll-step": 5,
     "tooltip": false,
+    "on-scroll-up": "volumectl up",
+    "on-scroll-down": "volumectl down",
     "format-source": "Mic ON",
     "format-source-muted": "Mic OFF",
     "format": "{icon} {volume}% {format_source}",
