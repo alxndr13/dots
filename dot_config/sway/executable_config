@@ -21,6 +21,8 @@ exec cliphist wipe
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
+exec avizo-service
+
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec solaar -w hide
 exec emote
