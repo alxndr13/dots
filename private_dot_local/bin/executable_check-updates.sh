@@ -4,7 +4,7 @@ yay -Sy > /dev/null 2>&1
 
 updates="$(checkupdates)"
 updates_escaped=${updates//$'\n'/\\n}
-updates_count=$(echo "$updates" | wc -l)
+updates_count=$(echo "$updates_escaped" | wc -l)
 
 if [[ -z $updates_count ]]; then
   echo '{"text": "0", "tooltip": "zero updates", "class":"$class"}'
