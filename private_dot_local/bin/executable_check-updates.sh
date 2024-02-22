@@ -16,5 +16,6 @@ if grep -q "linux-lts" "$updates"; then
   exit 0
 fi
 
-echo "{\"text\": \"$updates_count\", \"tooltip\": \"$updates_escaped\",\"class\":\"\$class\"}"
+
+jo text="$updates_count" tooltip="$updates_escaped" class="\$class"
 exit 0
