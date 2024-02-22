@@ -110,10 +110,13 @@ until_forever() {
   until false; do zsh -c "$@"; sleep 0.5; done
 }
 
+# Pet - https://github.com/knqyf263/pet
 function prev() {
   PREV=$(fc -lrn | head -n 1)
   sh -c "pet new `printf %q "$PREV"`"
 }
+
+alias pc='pet clip'
 
 # Markhub AKS Proxy
 
