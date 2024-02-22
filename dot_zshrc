@@ -110,6 +110,11 @@ until_forever() {
   until false; do zsh -c "$@"; sleep 0.5; done
 }
 
+function prev() {
+  PREV=$(fc -lrn | head -n 1)
+  sh -c "pet new `printf %q "$PREV"`"
+}
+
 # Markhub AKS Proxy
 
 # alias markhub-aks-proxy="source /home/ahuck/Code/secret_stuff/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
