@@ -16,7 +16,5 @@ if echo "$updates" | grep -q "linux-lts"; then
   exit 0
 fi
 
-
-echo test
 jo text="$updates_count" tooltip="$updates_escaped" class="\$class"
 exit 0
