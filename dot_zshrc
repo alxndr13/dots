@@ -120,7 +120,7 @@ alias pc='pet clip'
 
 # Markhub AKS Proxy
 
-# alias markhub-aks-proxy="source /home/ahuck/Code/secret_stuff/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
+alias markhub-aks-proxy="source /home/ahuck/Code/secret_stuff/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
 
 # secret_stuff check elevation
 func checkinfrapim () {
