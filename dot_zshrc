@@ -117,6 +117,7 @@ function prev() {
 }
 
 alias pc='pet clip'
+alias pe='pet exec'
 
 # Markhub AKS Proxy
 
