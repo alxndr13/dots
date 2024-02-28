@@ -27,7 +27,7 @@ swaylock --hide-keyboard-layout \
     -n \
     -f \
     -e \
-    -i /home/ahuck/.wallpaper/cow-abduction.jpg \
     -s fill \
     -l \
-    --fade-in 2
+    --fade-in 2 \
+    -i /home/ahuck/.wallpaper/wallhaven-3lyrvy.png
