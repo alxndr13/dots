@@ -101,6 +101,7 @@ alias jsrfr="jira sprint list --current --order-by status -q 'status=\"Ready to 
 alias jsl="jira sprint list --order-by status --current -q 'type != Sub-task' --columns 'KEY,SUMMARY,STATUS,ASSIGNEE,UPDATED'"
 alias jic="jira issue create -t Story --web"
 alias jicb="jira issue create -t Bug --web"
+alias t="task"
 
 until_success() {
   until zsh -c "$@"; do sleep 0.5; done
