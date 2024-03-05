@@ -123,6 +123,7 @@ alias pe='pet exec'
 # Markhub AKS Proxy
 
 alias markhub-aks-proxy="source /home/ahuck/Code/secret_stuff/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
+alias markhub-ssh-config='target=$(basename /home/ahuck/Code/secret_stuff/cs/infrastructure/deploy/sandbox01) /home/ahuck/Code/secret_stuff/cs/infrastructure/deploy/$target/scripts/ssh_config.sh > ~/.ssh/markhub_$target'
 
 # secret_stuff check elevation
 func checkinfrapim () {
