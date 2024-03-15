@@ -18,7 +18,14 @@ Host aur.archlinux.org
   IdentityFile ~/.ssh/aur.pub
   User aur
 
-Host alxndr13.xyz 
+Host alxndr13.xyz
   IdentityFile ~/.ssh/id_ed25519.pub
   User hucka
   Port 322
+
+Host pi
+  Hostname 192.168.178.153
+  IdentityFile ~/.ssh/id_ed25519.pub
+  User hucka
+  Port 322
+
