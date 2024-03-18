@@ -59,7 +59,6 @@ alias gitdeleteorphan="git fetch -p ; git branch -r | awk '{print \$1}' | grep -
 alias gittrackallremote="for branch in \$(git branch -r | awk \"{print \$1}\" | grep origin | grep -Ev \"(HEAD|main)\" | cut -d\/ -f2-); do git branch --track \$branch origin/\$branch || true ; done"
 alias cze='chezmoi edit --apply'
 alias dnsflush='systemd-resolve --flush-caches'
-alias pd='podman'
 alias htop='btm'
 alias top='btm'
 alias tf='terraform'
