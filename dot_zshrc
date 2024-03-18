@@ -92,7 +92,7 @@ alias cz='chezmoi'
 alias vimdiff='nvim -d'
 alias d="cd /home/ahuck/Dokumente/nvim_zettelkasten/ && nvim /home/ahuck/Dokumente/nvim_zettelkasten/$(date "+%Y-%m-%d").md; cd -"
 alias m="cd /home/ahuck/Dokumente/nvim_zettelkasten/ && nvim /home/ahuck/Dokumente/nvim_zettelkasten/$(date --date=tomorrow "+%Y-%m-%d").md; cd -"
-alias dive="dive --source=podman"
+alias dive="dive"
 alias valevocab="chezmoi edit --apply .config/vale/styles/Vocab/MyVocab/accept.txt"
 alias wlc='wl-copy'
 alias cronlogs='journalctl -b 0 -f -n 10000 | rg -i cron'
