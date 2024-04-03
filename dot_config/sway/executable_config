@@ -266,7 +266,7 @@ bindsym $mod+comma exec makoctl dismiss -a
 bindsym $mod+c exec cliphist list | wofi --show dmenu -H 400 -W 800 | cliphist decode | wl-copy
 
 # open emoji picker
-bindsym $mod+slash exec rofimoji
+bindsym $mod+slash exec rofimoji -a copy
 
 # Toggle Mic and AFK Mode
 bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/mic-toggle.sh
