@@ -1,0 +1,19 @@
+import = [
+  "~/.config/alacritty/catppuccin-frappe.toml"
+]
+[window]
+decorations = "Full"
+opacity = 0.8
+blur = true
+padding.x = 3
+padding.y = 3
+
+[font]
+
+normal.family = "Hack Nerd Font"
+bold.family = "Hack Nerd Font"
+italic.family = "Hack Nerd Font"
+bold_italic.family = "Hack Nerd Font"
+
+size = 12.0
+
