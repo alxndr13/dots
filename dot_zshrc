@@ -1,17 +1,16 @@
 # zsh compsys
 autoload -Uz compinit
-day_of_year=$(stat -c %Y $HOME/.zcompdump | xargs -I {} date -d @{} +%j)
-if [ $(date +'%j') != $day_of_year ]; then
+if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
   compinit
 else
   compinit -C
 fi
 
-source '/usr/share/zsh-antidote/antidote.zsh'
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 
 antidote load
 
-export PATH=$PATH:/home/ahuck/go/bin
+export PATH=$PATH:/Users/ahuck/go/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -58,9 +57,6 @@ alias watch='watch '
 alias gitdeleteorphan="git fetch -p ; git branch -r | awk '{print \$1}' | grep -E -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -D"
 alias gittrackallremote="for branch in \$(git branch -r | awk \"{print \$1}\" | grep origin | grep -Ev \"(HEAD|main)\" | cut -d\/ -f2-); do git branch --track \$branch origin/\$branch || true ; done"
 alias cze='chezmoi edit --apply'
-alias dnsflush='systemd-resolve --flush-caches'
-alias htop='btm'
-alias top='btm'
 alias tf='terraform'
 alias tfi='terraform init'
 alias tfs='terraform state'
@@ -71,29 +67,17 @@ alias tfp='terraform plan'
 alias tfa='terraform apply'
 alias tfaa='terraform apply --auto-approve'
 alias lz='lazygit'
-alias bton='bluetoothctl power on'
-alias btoff='bluetoothctl power off'
-alias btbose='bluetoothctl connect 60:AB:D2:41:CD:11'
-alias btbosedisc='bluetoothctl disconnect 60:AB:D2:41:CD:11'
-alias btk6='bluetoothctl connect DC:2C:26:2A:3E:00'
-alias btmx='bluetoothctl connect DA:E8:97:89:F2:96'
-alias maxuhrzeit="TZ='Pacific/Honolulu' date --rfc-email"
 alias n='nnn'
 alias st='stern'
 alias kt='kitty --detach'
 alias k9s='k9s --logoless -A'
 alias kill9='kill -9'
-alias gomobile='~/.local/bin/switch-headset-mode.sh headset-head-unit-msbc && nmcli radio wifi on'
-alias asciicast2gif='docker run --rm -v $PWD:/data asciinema/asciicast2gif'
-#alias kapitan='docker run -t --rm -v $(pwd):/src:delegated docker.markant.com/mips-ql-infra/infra-base/infra-base:stable kapitan'
-alias cal='cal -w -n 3 -m'
 alias cz='chezmoi'
 alias vimdiff='nvim -d'
-alias d="cd /home/ahuck/Dokumente/nvim_zettelkasten/ && nvim /home/ahuck/Dokumente/nvim_zettelkasten/$(date "+%Y-%m-%d").md; cd -"
-alias m="cd /home/ahuck/Dokumente/nvim_zettelkasten/ && nvim /home/ahuck/Dokumente/nvim_zettelkasten/$(date --date=tomorrow "+%Y-%m-%d").md; cd -"
+alias d="cd /Users/ahuck/Documents/inovex/nvim_zettelkasten/ && nvim /Users/ahuck/Documents/inovex/nvim_zettelkasten/$(date "+%Y-%m-%d").md; cd -"
+alias m="cd /Users/ahuck/Documents/inovex/nvim_zettelkasten/ && nvim /Users/ahuck/Documents/inovex/nvim_zettelkasten/$(date -v +1d "+%Y-%m-%d").md; cd -"
 alias dive="dive"
 alias valevocab="chezmoi edit --apply .config/vale/styles/Vocab/MyVocab/accept.txt"
-alias wlc='wl-copy'
 alias cronlogs='journalctl -b 0 -f -n 10000 | rg -i cron'
 
 alias jsrfr="jira sprint list --current --order-by status -q 'status=\"Ready to Review\"' --columns 'KEY,SUMMARY,STATUS,ASSIGNEE,UPDATED'"
@@ -121,10 +105,10 @@ alias pe='pet exec'
 
 # Markhub AKS Proxy
 
-alias markhub-aks-proxy="source /home/ahuck/Code/markant/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
+alias markhub-aks-proxy="source /Users/ahuck/Code/markant/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
 func markhub-ssh-config() {
-  target=$(basename /home/ahuck/Code/markant/cs/infrastructure/deploy/*)
-  /home/ahuck/Code/markant/cs/infrastructure/deploy/$target/scripts/ssh_config.sh > ~/.ssh/markhub_$target
+  target=$(basename /Users/ahuck/Code/markant/cs/infrastructure/deploy/*)
+  /Users/ahuck/Code/markant/cs/infrastructure/deploy/$target/scripts/ssh_config.sh > ~/.ssh/markhub_$target
 }
 
 # Markant check elevation
@@ -177,6 +161,8 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[." insert-last-word
 bindkey '^Q' push-line
 
+export WORDCHARS=''
+
 _evalcache starship init zsh
 
 ## direnv
@@ -190,4 +176,5 @@ _evalcache zoxide init zsh
 # export MCFLY_PROMPT="❯"
 # export MCFLY_KEY_SCHEME=vim
 # _evalcache mcfly init zsh
+
 
