@@ -1,22 +1,23 @@
 [user]
 	name = Alexander Huck
 	email = alexander.huck@inovex.de
-	signingkey = /home/ahuck/.ssh/id_ed25519
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJE0v7KQutcYmBKcjKGww+J8Vta1eAA9EB3+ClRUYwKt
 [init]
 	defaultBranch = main
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [merge]
-	conflictstyle = diff3
-[commit]
-	gpgSign = true
-[tag]
-	gpgSign = true
-[pull]
-	rebase = true
+  conflictstyle = diff3
+[user]
+
 [gpg]
-	program = gpg
-	format = ssh
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+
 [diff]
   external = difft
 
