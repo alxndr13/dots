@@ -9,6 +9,10 @@ padding.x = 3
 padding.y = 3
 option_as_alt = "Both"
 
+
+[selection]
+save_to_clipboard = true
+
 [font]
 
 normal.family = "Hack Nerd Font"
