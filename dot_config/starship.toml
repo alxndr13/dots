@@ -65,3 +65,9 @@ surface0 = "#414559"
 base = "#303446"
 mantle = "#292c3c"
 crust = "#232634"
+
+# ~/.config/starship.toml
+
+[docker_context]
+format = 'via [🐋 $context](blue bold)'
+disabled = true
