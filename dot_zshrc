@@ -21,6 +21,7 @@ SAVEHIST=500000
 setopt appendhistory
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
+setopt nohistverify
 
 ZSH_FZF_HISTORY_SEARCH_DATES_IN_SEARCH=0
 
@@ -42,12 +43,14 @@ alias standup='git-standup -d 1 -s'
 alias kx='kubectx'
 alias kns='kubens'
 alias cat='bat -pp'
+alias make="gmake"
 alias pat='bat --paging=always'
 alias note='vim ~/notes.txt'
 alias td="todo.sh"
 alias pass='gopass'
 alias vi='nvim'
 alias dp='describepod'
+alias shfmt="shfmt --indent 2 --case-indent"
 alias fp='findpod'
 alias tp='tailpod'
 alias vim='nvim'
@@ -169,6 +172,7 @@ _evalcache starship init zsh
 _evalcache direnv hook zsh
 ## zoxide
 _evalcache zoxide init zsh
+
 
 # export MCFLY_FUZZY=2
 # export MCFLY_RESULTS=20
