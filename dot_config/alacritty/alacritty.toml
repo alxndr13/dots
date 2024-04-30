@@ -7,6 +7,7 @@ opacity = 0.8
 blur = true
 padding.x = 3
 padding.y = 3
+option_as_alt = "Both"
 
 [font]
 
@@ -15,5 +16,4 @@ bold.family = "Hack Nerd Font"
 italic.family = "Hack Nerd Font"
 bold_italic.family = "Hack Nerd Font"
 
-size = 12.0
-
+size = 16.0
