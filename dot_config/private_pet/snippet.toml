@@ -1,0 +1,42 @@
+
+[[Snippets]]
+  Description = "build bob image locally"
+  Output = ""
+  Tag = []
+  command = "export MARKHUB_NO_PULL=true"
+
+[[Snippets]]
+  Description = "check if a changed happened between commits or tags in a folder or a file"
+  Output = ""
+  Tag = []
+  command = "git diff HEAD $commitOrTag -- $folder || echo changed"
+
+[[Snippets]]
+  Description = "renew all certs in monitoring namespace"
+  Output = ""
+  Tag = []
+  command = "cmctl renew --all -n monitoring"
+
+[[Snippets]]
+  Description = "open gitlab repo in browser"
+  Output = ""
+  Tag = []
+  command = "glab repo view --web"
+
+[[Snippets]]
+  Description = "get all az commands in a folder and all subfolder"
+  Output = ""
+  Tag = []
+  command = "rg -e 'az (\\w*) (\\w*)' -o -IN | sort | uniq "
+
+[[Snippets]]
+  Description = "skip shell validation in markhub"
+  Output = ""
+  Tag = []
+  command = "export MARKHUB_SKIP_SHELL_VALIDATE=true"
+
+[[Snippets]]
+  Description = "flush DNS cache"
+  Output = ""
+  Tag = []
+  command = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"

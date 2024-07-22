@@ -33,12 +33,14 @@ zstyle ':completion:*:cd:*' file-patterns '*(/):directories'
 zstyle ':completion:*' special-dirs true
 
 export EDITOR="nvim"
+export HOMEBREW_NO_ENV_HINTS="true"
 alias ll='eza --icons -l --time-style relative --git -snew '
 alias cdmktemp="cd $(mktemp -d)"
 alias k='kubectl'
 # source <(kubectl completion zsh)
 # compdef kubecolor=kubectl
-alias calsync="~/calendarsync.sh"
+export CALENDARSYNC_ENCRYPTION_KEY=test123
+alias calsync="cd ~; /Users/ahuck/Code/oss/calendarsync/bin/calendarsync --config /Users/ahuck/Code/oss/sync.yaml --open-browser=false; cd -"
 alias standup='git-standup -d 1 -s'
 alias kx='kubectx'
 alias kns='kubens'

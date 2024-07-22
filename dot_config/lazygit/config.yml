@@ -9,8 +9,10 @@ git:
     colorArg: always
     pager: diff-so-fancy
 
+promptToReturnFromSubprocess: false
+
 theme:
-  lightTheme: false 
+  lightTheme: false
   activeBorderColor:
     - "#a6d189" # Green
     - bold
