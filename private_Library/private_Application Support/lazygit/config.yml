@@ -1,0 +1,10 @@
+gui:
+  showRandomTip: false
+  showCommandLog: false
+git:
+  overrideGpg: true
+  paging:
+    colorArg: always
+    pager: diff-so-fancy
+
+promptToReturnFromSubprocess: false
