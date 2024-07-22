@@ -37,6 +37,9 @@ truncation_symbol = '…/'
 min_time = 500
 format = 'took [$duration]($style) '
 
+[aws]
+disabled = true
+
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
