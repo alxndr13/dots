@@ -22,3 +22,6 @@ size = 16.0
 
 [mouse]
 hide_when_typing = false
+
+[scrolling]
+history = 100000
