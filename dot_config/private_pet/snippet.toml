@@ -40,3 +40,9 @@
   Output = ""
   Tag = []
   command = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+[[Snippets]]
+  Description = "merge two yamls"
+  Output = ""
+  Tag = []
+  command = "yq eval-all '. as $item ireduce ({}; . *+ $item )' kubeconfig_dev kubeconfig_kubermatic_prod > test.yaml"
