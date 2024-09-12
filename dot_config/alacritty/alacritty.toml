@@ -14,10 +14,10 @@ option_as_alt = "Both"
 save_to_clipboard = true
 
 [font]
-normal.family = "Hack Nerd Font"
-bold.family = "Hack Nerd Font"
-italic.family = "Hack Nerd Font"
-bold_italic.family = "Hack Nerd Font"
+normal.family = "BlexMono Nerd Font Light"
+bold.family = "BlexMono Nerd Font"
+italic.family = "BlexMono Nerd Font"
+bold_italic.family = "BlexMono Nerd Font"
 size = 16.0
 
 [mouse]
