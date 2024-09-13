@@ -23,3 +23,10 @@ encryption = "age"
 ```bash
 chezmoi init --apply --verbose ssh://git@gitlab.inovex.de:2424/ahuck/dots.git
 ```
+
+
+## Disable font smoothing in alacritty
+
+```bash
+defaults write org.alacritty AppleFontSmoothing -int 0
+```
