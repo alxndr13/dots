@@ -18,7 +18,6 @@ normal.family = "Hack Nerd Font"
 bold.family = "Hack Nerd Font"
 italic.family = "Hack Nerd Font"
 bold_italic.family = "Hack Nerd Font"
-use_thin_strokes = true
 size = 18.0
 
 [mouse]
