@@ -1,48 +1,91 @@
 
 [[Snippets]]
   Description = "build bob image locally"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "export MARKHUB_NO_PULL=true"
 
 [[Snippets]]
   Description = "check if a changed happened between commits or tags in a folder or a file"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
   Output = ""
   Tag = []
-  command = "git diff HEAD $commitOrTag -- $folder || echo changed"
+  command = "git diff $commitOrTag HEAD -- $folder || echo changed"
 
 [[Snippets]]
   Description = "renew all certs in monitoring namespace"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cmctl renew --all -n monitoring"
 
 [[Snippets]]
   Description = "open gitlab repo in browser"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "glab repo view --web"
 
 [[Snippets]]
   Description = "get all az commands in a folder and all subfolder"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "rg -e 'az (\\w*) (\\w*)' -o -IN | sort | uniq "
 
 [[Snippets]]
   Description = "skip shell validation in markhub"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "export MARKHUB_SKIP_SHELL_VALIDATE=true"
 
 [[Snippets]]
   Description = "flush DNS cache"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 [[Snippets]]
   Description = "merge two yamls"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "yq eval-all '. as $item ireduce ({}; . *+ $item )' kubeconfig_dev kubeconfig_kubermatic_prod > test.yaml"
+
+[[Snippets]]
+  Description = "generate spoke ids"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "pwgen -0AB 6 10"
+
+[[Snippets]]
+  Description = "get emails from azure group member export csv"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "csvcut -c 2 az-rbac-vmaccount-a-meps-dev_2024-8-20.csv | tail -n +2 | grep -v \"\\\"\\\"\" "
+
+[[Snippets]]
+  Description = "export correct LC for mosh"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "export LC_ALL=\"en_US.UTF-8\"\\n"
+
+[[Snippets]]
+  Description = "send notification to ntfy.sh"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "curl -X POST -d \"Hi\" -H \"Authorization: Bearer tk_zummysjr6j2c5ne36basbf6as2gn0\" https://ntfy.alxndr13.xyz/uxuOeC2EvpohRHWp"
+
+[[Snippets]]
+  Description = "search for commits where the string 'restic' was part of some modifications"
+  Filename = "/Users/ahuck/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "git log -G \"restic\" -p"
