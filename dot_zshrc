@@ -161,8 +161,9 @@ function git_current_branch() {
 # Shift Tab to accept autosuggestion
 bindkey '^[[Z' autosuggest-accept
 # CTRL+ arrow keys for word
-bindkey "^[[1;5C" forward-word
+# needs to disable mission control shortcut for this to work
 bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 bindkey "^[." insert-last-word
 bindkey '^Q' push-line
 
