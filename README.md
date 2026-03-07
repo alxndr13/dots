@@ -24,7 +24,20 @@ encryption = "age"
 chezmoi init --apply --verbose ssh://git@gitlab.inovex.de:2424/ahuck/dots.git
 ```
 
-## Disable font smoothing for alacritty
+## MacOS Dock settings
+
+```
+defaults write com.apple.dock autohide-delay -float 0; killall Dock
+defaults write com.apple.dock autohide-time-modifier -float 0.1; killall Dock
+```
+
+## MacOS TouchID for sudo
+
+```
+https://sixcolors.com/post/2023/08/in-macos-sonoma-touch-id-for-sudo-can-survive-updates/
+```
+
+## Disable font smoothing in alacritty
 
 ```bash
 defaults write org.alacritty AppleFontSmoothing -int 0
