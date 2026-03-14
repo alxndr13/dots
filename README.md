@@ -37,6 +37,16 @@ defaults write com.apple.dock autohide-time-modifier -float 0.1; killall Dock
 https://sixcolors.com/post/2023/08/in-macos-sonoma-touch-id-for-sudo-can-survive-updates/
 ```
 
+## zsh case-insensitive tab completion
+
+Add to `~/.zshrc` (after `compinit`):
+
+```bash
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+```
+
+Exact matches are preferred first, then case-insensitive, then partial-word, then substring.
+
 ## Disable font smoothing in alacritty
 
 ```bash
