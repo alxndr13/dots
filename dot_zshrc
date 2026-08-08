@@ -52,6 +52,7 @@ alias td="todo.sh"
 alias pass='gopass'
 alias vi='nvim'
 alias dp='describepod'
+alias d='zk daily'
 alias shfmt="shfmt --indent 2 --case-indent"
 alias fp='findpod'
 alias tp='tailpod'
@@ -79,11 +80,93 @@ alias k9s='k9s --logoless -A'
 alias kill9='kill -9'
 alias cz='chezmoi'
 alias vimdiff='nvim -d'
-alias d="cd /Users/ahuck/Documents/inovex/nvim_zettelkasten/ && nvim /Users/ahuck/Documents/inovex/nvim_zettelkasten/$(date "+%Y-%m-%d").md; cd -"
-alias m="cd /Users/ahuck/Documents/inovex/nvim_zettelkasten/ && nvim /Users/ahuck/Documents/inovex/nvim_zettelkasten/$(date -v +1d "+%Y-%m-%d").md; cd -"
 alias dive="dive"
+alias vz="vi ~/.zshrc"
+alias mutt="neomutt"
+alias c="claude --dangerously-skip-permissions --append-system-prompt-file ~/.claude/simple-english.md"
+alias f="vi /Users/ahuck/Documents/alxndr13/Todos.md"
 alias valevocab="chezmoi edit --apply .config/vale/styles/Vocab/MyVocab/accept.txt"
 alias cronlogs='journalctl -b 0 -f -n 10000 | rg -i cron'
+
+# Jarvis gaming mode: unload NanoClaw and stop OrbStack, then optionally
+# schedule a one-shot restart for later.
+export JARVIS_LAUNCH_LABEL="com.nanoclaw-v2-6ee00f8d"
+export JARVIS_LAUNCH_PLIST="$HOME/Library/LaunchAgents/com.nanoclaw-v2-6ee00f8d.plist"
+
+function jarvis-stop() {
+  local domain="gui/$(id -u)"
+  launchctl bootout "$domain/$JARVIS_LAUNCH_LABEL" 2>/dev/null || launchctl remove "$JARVIS_LAUNCH_LABEL" 2>/dev/null || true
+  orbctl stop
+}
+
+function jarvis-start() {
+  local domain="gui/$(id -u)"
+  orbctl start
+  launchctl bootstrap "$domain" "$JARVIS_LAUNCH_PLIST" 2>/dev/null || true
+  launchctl kickstart -k "$domain/$JARVIS_LAUNCH_LABEL"
+}
+
+function jarvis-start-at() {
+  local when="${1:-02:00}"
+  local lower="${when:l}"
+  local hour minute suffix
+
+  if [[ "$lower" =~ '^([0-9]{1,2})(:([0-9]{2}))?([ap]m)$' ]]; then
+    hour="${match[1]}"
+    minute="${match[3]:-00}"
+    suffix="${match[4]}"
+    if [[ "$suffix" == "pm" && "$hour" -lt 12 ]]; then hour=$((hour + 12)); fi
+    if [[ "$suffix" == "am" && "$hour" -eq 12 ]]; then hour=0; fi
+  elif [[ "$lower" =~ '^([0-9]{1,2})(:([0-9]{2}))?$' ]]; then
+    hour="${match[1]}"
+    minute="${match[3]:-00}"
+  else
+    echo "usage: jarvis-start-at HH[:MM] | 2am | 2:30am" >&2
+    return 2
+  fi
+
+  if (( hour < 0 || hour > 23 || minute < 0 || minute > 59 )); then
+    echo "invalid time: $when" >&2
+    return 2
+  fi
+
+  local uid="$(id -u)"
+  local label="com.jarvis.scheduled-start"
+  local plist="$HOME/Library/LaunchAgents/$label.plist"
+  local cmd="/opt/homebrew/bin/orbctl start; /bin/launchctl bootstrap gui/$uid \"$JARVIS_LAUNCH_PLIST\" 2>/dev/null || true; /bin/launchctl kickstart -k gui/$uid/$JARVIS_LAUNCH_LABEL; /bin/launchctl bootout gui/$uid/$label 2>/dev/null; /bin/rm -f \"$plist\""
+
+  launchctl bootout "gui/$uid/$label" 2>/dev/null || true
+  command cat > "$plist" <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>$label</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>-lc</string>
+    <string><![CDATA[$cmd]]></string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>$hour</integer>
+    <key>Minute</key>
+    <integer>$minute</integer>
+  </dict>
+</dict>
+</plist>
+EOF
+  launchctl bootstrap "gui/$uid" "$plist"
+  printf "Jarvis restart scheduled for %02d:%02d.\\n" "$hour" "$minute"
+}
+
+alias joff='jarvis-stop'
+alias jon='jarvis-start'
+alias jat='jarvis-start-at'
+alias j2am='jarvis-start-at 02:00'
 
 alias jsrfr="jira sprint list --current --order-by status -q 'status=\"Ready to Review\"' --columns 'KEY,SUMMARY,STATUS,ASSIGNEE,UPDATED'"
 alias jsl="jira sprint list --order-by status --current -q 'type != Sub-task' --columns 'KEY,SUMMARY,STATUS,ASSIGNEE,UPDATED'"
@@ -107,19 +190,6 @@ function prev() {
 
 alias pc='pet clip'
 alias pe='pet exec'
-
-# Markhub AKS Proxy
-
-alias markhub-aks-proxy="source /Users/ahuck/Code/markant/cs/infrastructure/deploy/*/scripts/aks-ssh-port-forwarding.sh"
-func markhub-ssh-config() {
-  target=$(basename /Users/ahuck/Code/markant/cs/infrastructure/deploy/*)
-  /Users/ahuck/Code/markant/cs/infrastructure/deploy/$target/scripts/ssh_config.sh > ~/.ssh/markhub_$target
-}
-
-# Markant check elevation
-func checkinfrapim () {
-  az ad user get-member-groups --id admhucka@de.markant.com | jq '.[] | select(.displayName == "az-rbac-pag-cloudinfra")' && if [[ $? -eq 0 ]]; then echo "user is part of az-rbac-pag-cloudinfra"; fi
-}
 
 alias tflint_odm='tflint --enable-rule terraform_deprecated_index --enable-rule terraform_unused_declarations --enable-rule terraform_comment_syntax --enable-rule terraform_documented_outputs --enable-rule terraform_documented_variables --enable-rule terraform_typed_variables --enable-rule terraform_naming_convention --disable-rule terraform_module_pinned_source --disable-rule aws_acm_certificate_invalid_private_key --enable-rule terraform_required_version --enable-rule terraform_required_providers --enable-rule terraform_standard_module_structure --enable-rule terraform_workspace_remote'
 
@@ -176,6 +246,7 @@ _evalcache direnv hook zsh
 ## zoxide
 _evalcache zoxide init zsh
 
+
 # export MCFLY_FUZZY=2
 # export MCFLY_RESULTS=20
 # export MCFLY_INTERFACE_VIEW=BOTTOM
@@ -184,3 +255,27 @@ _evalcache zoxide init zsh
 # _evalcache mcfly init zsh
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export ANTHROPIC_API_KEY="$(cat ~/.anthropic_key)"
+export ZK_NOTEBOOK_DIR=/Users/ahuck/notes
+
+# The `watch` alias breaks zsh's parse of Otty's watch() wrapper (aliases
+# expand at parse time) — drop it before the Otty block, restore at the first
+# prompt via a one-shot precmd. Otty moves its >>>/<<< block to the end of the
+# file on rewrite, so a plain "re-alias after the block" line keeps ending up
+# in front of it; the precmd fires after every place Otty sources the payload
+# (inline block AND its deferred ZDOTDIR loader), independent of file order.
+if [ -n "$OTTY_SHELL_INTEGRATION" ]; then
+  unalias watch 2>/dev/null
+  __restore_watch_alias() {
+    alias watch='watch '
+    precmd_functions=(${precmd_functions:#__restore_watch_alias})
+    unfunction __restore_watch_alias
+  }
+  typeset -ag precmd_functions
+  precmd_functions+=(__restore_watch_alias)
+fi

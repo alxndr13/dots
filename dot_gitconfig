@@ -1,6 +1,6 @@
 [user]
 	name = Alexander Huck
-	email = alexander.huck@inovex.de
+	email = alxndr13@mailbox.org
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJE0v7KQutcYmBKcjKGww+J8Vta1eAA9EB3+ClRUYwKt
 [init]
 	defaultBranch = main

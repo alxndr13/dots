@@ -3,9 +3,7 @@ gui:
   showCommandLog: false
 git:
   overrideGpg: true
-  paging:
-    colorArg: always
-    pager: delta --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
-
-
+  pagers:
+    - colorArg: always
+      pager: diff-so-fancy
 promptToReturnFromSubprocess: false
